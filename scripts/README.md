@@ -108,7 +108,7 @@ scripts/collect-dashboard-cache-benchmark.sh \
   expected-image-reference
 ```
 
-Arguments are kubeconfig, output TSV, sample count, interval seconds, and exact expected image. The collector fails if the pod changes or the image does not match.
+Arguments are kubeconfig, output TSV, sample count, interval seconds, and exact expected image. Optional namespace, Deployment name, and container name arguments follow; they default to `redhat-ods-applications`, `dashboard-operator`, and `manager`. The collector fails if the pod changes or the image does not match.
 
 ## Heap collection
 
@@ -120,10 +120,11 @@ scripts/collect-dashboard-heap-profile.sh \
   /path/to/kubeconfig \
   redhat-ods-applications \
   dashboard-operator-pod-name \
-  outputs/profile-prefix
+  outputs/profile-prefix \
+  manager
 ```
 
-The script saves the forced-GC heap, debug text, and top reports for in-use and allocated bytes/objects.
+The optional final argument selects the operator container and defaults to `manager`. The script saves the forced-GC heap, debug text, and top reports for in-use and allocated bytes/objects.
 
 ## Chart rendering
 

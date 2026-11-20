@@ -4,6 +4,7 @@ Reproducible OpenShift load generation, memory benchmarking, and heap-profile ev
 
 ## Contents
 
+- [Dashboard cache performance skill](.agents/skills/dashboard-cache-performance/SKILL.md): reusable pre/post orchestration with timestamped result directories.
 - [`scripts/`](scripts/README.md): cluster population, benchmark collection, heap collection, and chart rendering tools.
 - [`outputs/dashboard-cache-testing-summary.md`](outputs/dashboard-cache-testing-summary.md): consolidated test results and visual comparisons.
 - [`outputs/dashboard-cache-test-plan.md`](outputs/dashboard-cache-test-plan.md): complete test plan and acceptance criteria.
@@ -38,6 +39,8 @@ python3 scripts/populate-rhoai-scale-cluster.py \
 ```
 
 See [`scripts/README.md`](scripts/README.md) for all population modes, cleanup, and profiling commands.
+
+For a complete configurable pre/post run, invoke `$dashboard-cache-performance` with the source checkout, pre/post commits, cluster kubeconfig, and workload parameters. Results are created under `output/results/<UTC datetime>-<run name>/`.
 
 ## Safety
 

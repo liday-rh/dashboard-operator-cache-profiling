@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_name": "dashboard-cache",
+  "source_root": "/absolute/path/to/odh-dashboard",
+  "pre_commit": "PRE_COMMIT_OR_REF",
+  "post_commit": "POST_COMMIT_OR_REF",
+  "kubeconfig": "/absolute/path/to/kubeconfig",
+  "output_root": "output/results",
+  "images": {
+    "pre": "",
+    "post": ""
+  },
+  "operator": {
+    "namespace": "redhat-ods-applications",
+    "deployment": "dashboard-operator",
+    "container": "manager",
+    "production_memory_limit": "256Mi",
+    "pre_profile_memory_limit": "1Gi"
+  },
+  "benchmark": {
+    "samples": 20,
+    "interval_seconds": 30,
+    "stabilization_seconds": 120,
+    "collect_pprof": true
+  },
+  "scenarios": [
+    {
+      "name": "namespace-scale",
+      "label": "350 namespaces",
+      "prefix": "cache-ns",
+      "namespaces": 350,
+      "populate_resources": true,
+      "deployment_replicas": 0,
+      "configmaps_per_namespace": 1,
+      "configmap_payload_kib": 0
+    },
+    {
+      "name": "configmap-payload",
+      "label": "ConfigMap payload",
+      "prefix": "cache-payload",
+      "namespaces": 90,
+      "populate_resources": true,
+      "deployment_replicas": 0,
+      "configmaps_per_namespace": 2,
+      "configmap_payload_kib": 800
+    }
+  ]
+}

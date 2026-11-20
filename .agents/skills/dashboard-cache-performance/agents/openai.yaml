@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dashboard Cache Performance"
+  short_description: "Run reusable pre/post cache benchmarks"
+  default_prompt: "Use $dashboard-cache-performance to benchmark dashboard-operator memory before and after two commits."

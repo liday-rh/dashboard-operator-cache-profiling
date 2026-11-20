@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-if [[ $# -ne 5 ]]; then
-  echo "usage: $0 KUBECONFIG OUTPUT_TSV SAMPLE_COUNT INTERVAL_SECONDS EXPECTED_IMAGE" >&2
+if [[ $# -lt 5 || $# -gt 8 ]]; then
+  echo "usage: $0 KUBECONFIG OUTPUT_TSV SAMPLE_COUNT INTERVAL_SECONDS EXPECTED_IMAGE [NAMESPACE [DEPLOYMENT [CONTAINER]]]" >&2
   exit 2
 fi
 
@@ -12,12 +12,15 @@ output=$2
 sample_count=$3
 interval_seconds=$4
 expected_image=$5
-namespace=redhat-ods-applications
+namespace=${6:-redhat-ods-applications}
+deployment=${7:-dashboard-operator}
+container=${8:-manager}
 
 pod=$(oc --kubeconfig "$kubeconfig" get pods -n "$namespace" -o json |
-  jq -r '[.items[] | select(.metadata.name | startswith("dashboard-operator-")) | select(.status.phase == "Running") | .metadata.name] | if length == 1 then .[0] else error("expected exactly one running dashboard-operator pod") end')
+  jq -r --arg prefix "${deployment}-" '[.items[] | select(.metadata.name | startswith($prefix)) | select(.status.phase == "Running") | .metadata.name] | if length == 1 then .[0] else error("expected exactly one running operator pod") end')
 pod_uid=$(oc --kubeconfig "$kubeconfig" get pod "$pod" -n "$namespace" -o jsonpath='{.metadata.uid}')
-image=$(oc --kubeconfig "$kubeconfig" get pod "$pod" -n "$namespace" -o jsonpath='{.spec.containers[0].image}')
+image=$(oc --kubeconfig "$kubeconfig" get pod "$pod" -n "$namespace" -o json |
+  jq -r --arg container "$container" '.spec.containers[] | select(.name == $container) | .image')
 
 if [[ "$image" != "$expected_image" ]]; then
   echo "unexpected operator image: $image" >&2
@@ -34,11 +37,12 @@ for ((sample = 1; sample <= sample_count; sample++)); do
   fi
 
   timestamp=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-  working_set=$(oc --kubeconfig "$kubeconfig" adm top pod "$pod" -n "$namespace" --containers --no-headers | awk 'NR == 1 {print $4}')
+  working_set=$(oc --kubeconfig "$kubeconfig" adm top pod "$pod" -n "$namespace" --containers --no-headers |
+    awk -v container="$container" '$2 == container {print $4}')
   status=$(oc --kubeconfig "$kubeconfig" get pod "$pod" -n "$namespace" -o json)
-  restarts=$(printf '%s' "$status" | jq -r '.status.containerStatuses[0].restartCount')
-  last_reason=$(printf '%s' "$status" | jq -r '.status.containerStatuses[0].lastState.terminated.reason // "none"')
-  metrics=$(oc --kubeconfig "$kubeconfig" exec -n "$namespace" "$pod" -- sh -c 'curl -ks https://127.0.0.1:8443/metrics')
+  restarts=$(printf '%s' "$status" | jq -r --arg container "$container" '.status.containerStatuses[] | select(.name == $container) | .restartCount')
+  last_reason=$(printf '%s' "$status" | jq -r --arg container "$container" '.status.containerStatuses[] | select(.name == $container) | .lastState.terminated.reason // "none"')
+  metrics=$(oc --kubeconfig "$kubeconfig" exec -n "$namespace" "$pod" -c "$container" -- sh -c 'curl -ks https://127.0.0.1:8443/metrics')
 
   process_rss=$(printf '%s\n' "$metrics" | awk '$1 == "process_resident_memory_bytes" {print $2}')
   heap_alloc=$(printf '%s\n' "$metrics" | awk '$1 == "go_memstats_heap_alloc_bytes" {print $2}')
