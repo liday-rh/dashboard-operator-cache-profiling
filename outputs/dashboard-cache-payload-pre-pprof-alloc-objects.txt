@@ -1,0 +1,108 @@
+File: manager
+Build ID: 340dd7dbbf22457d76b358ccd32d1828fec30035
+Type: alloc_objects
+Time: 2026-11-19 18:12:13 GMT
+Showing nodes accounting for 24640708, 82.05% of 30031150 total
+Dropped 914 nodes (cum <= 150155)
+Showing top 100 nodes out of 391
+      flat  flat%   sum%        cum   cum%
+   4952611 16.49% 16.49%    4952611 16.49%  sigs.k8s.io/kustomize/kyaml/yaml.CopyYNode
+   2371223  7.90% 24.39%    2371223  7.90%  reflect.unsafe_New
+   1048171  3.49% 27.88%    1087093  3.62%  sigs.k8s.io/json/internal/golang/encoding/json.unquote (inline)
+    974871  3.25% 31.12%     974871  3.25%  sigs.k8s.io/kustomize/kyaml/yaml.NewRNode (partial-inline)
+    918105  3.06% 34.18%    2792999  9.30%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).objectInterface
+    916726  3.05% 37.23%     916726  3.05%  internal/bytealg.MakeNoZero
+    753665  2.51% 39.74%     764588  2.55%  go.yaml.in/yaml/v3.resolve
+    655364  2.18% 41.93%     977867  3.26%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).literalInterface
+    633970  2.11% 44.04%     633970  2.11%  k8s.io/apimachinery/pkg/runtime.DeepCopyJSONValue
+    600148  2.00% 46.04%     600148  2.00%  k8s.io/api/rbac/v1.(*PolicyRule).DeepCopyInto
+    524291  1.75% 47.78%    1220629  4.06%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Field.func1
+    521051  1.74% 49.52%    1089031  3.63%  go.yaml.in/yaml/v3.(*parser).node
+    415074  1.38% 50.90%     480610  1.60%  strconv.syntaxError (inline)
+    407660  1.36% 52.26%     464459  1.55%  path.Join
+    405387  1.35% 53.61%     405387  1.35%  go.yaml.in/yaml/v3.read
+    393237  1.31% 54.91%     393237  1.31%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.fieldFilter (inline)
+    393217  1.31% 56.22%     393217  1.31%  go.yaml.in/yaml/v3.(*decoder).scalar
+    347186  1.16% 57.38%     629050  2.09%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).DeepCopyInto
+    344066  1.15% 58.53%    2254286  7.51%  go.yaml.in/yaml/v3.(*parser).parseChild (inline)
+    314028  1.05% 59.57%     314028  1.05%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.SetNestedStringMap
+    305846  1.02% 60.59%     387779  1.29%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta.func1
+    297667  0.99% 61.58%    1127822  3.76%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.getFilter
+    294914  0.98% 62.56%    1057520  3.52%  k8s.io/apimachinery/pkg/runtime.toUnstructured
+    271430   0.9% 63.47%     271430   0.9%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).AppendToFieldPath (inline)
+    248739  0.83% 64.30%    1213244  4.04%  go.yaml.in/yaml/v3.(*parser).scalar
+    248106  0.83% 65.12%     248106  0.83%  go.yaml.in/yaml/v2.(*parser).node (inline)
+    245890  0.82% 65.94%     245890  0.82%  go.yaml.in/yaml/v2.read
+    229376  0.76% 66.70%     229376  0.76%  go.yaml.in/yaml/v2.resolve
+    212996  0.71% 67.41%     212996  0.71%  sigs.k8s.io/kustomize/kyaml/yaml.mergeAll.func1
+    204801  0.68% 68.10%     204801  0.68%  sigs.k8s.io/kustomize/kyaml/yaml.cleanPath
+    182500  0.61% 68.70%     182500  0.61%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Fields.func1
+    181221   0.6% 69.31%     181221   0.6%  k8s.io/apimachinery/pkg/util/net.CloneHeader (inline)
+    180228   0.6% 69.91%     180228   0.6%  k8s.io/apimachinery/pkg/runtime/schema.GroupVersion.String
+    170839  0.57% 70.48%     170839  0.57%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.nbrSlice.mergeOne
+    169689  0.57% 71.04%     169689  0.57%  reflect.mapassign_faststr0
+    163845  0.55% 71.59%     163845  0.55%  reflect.makemap
+    160571  0.53% 72.12%     986509  3.28%  sigs.k8s.io/kustomize/kyaml/yaml.FieldSetter.Filter
+    141999  0.47% 72.59%     529778  1.76%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta
+    128342  0.43% 73.02%     239380   0.8%  path/filepath.walkSymlinks
+    120153   0.4% 73.42%     160205  0.53%  go.yaml.in/yaml/v2.yaml_parser_fetch_stream_start
+    115350  0.38% 73.81%     872911  2.91%  encoding/json.mapEncoder.encode
+    106498  0.35% 74.16%    3710179 12.35%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Pipe
+     98308  0.33% 74.49%     627208  2.09%  k8s.io/client-go/rest.(*Request).URL
+     98306  0.33% 74.81%    1846174  6.15%  sigs.k8s.io/kustomize/api/filters/fieldspec.Filter.handleMap
+     90503   0.3% 75.12%     584731  1.95%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).setMapInMetadata
+     87382  0.29% 75.41%     825938  2.75%  sigs.k8s.io/kustomize/kyaml/yaml.IsValueNonString
+     87381  0.29% 75.70%    2620963  8.73%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).valueInterface
+     87380  0.29% 75.99%     183561  0.61%  k8s.io/apimachinery/pkg/apis/meta/v1.(*FieldsV1).DeepCopy (inline)
+     81926  0.27% 76.26%     324962  1.08%  sigs.k8s.io/kustomize/api/internal/utils.MakeResIds
+     79828  0.27% 76.53%     341973  1.14%  reflect.Value.MapKeys
+     78848  0.26% 76.79%    1852285  6.17%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).arrayInterface
+     76459  0.25% 77.04%     635164  2.12%  go.yaml.in/yaml/v2.(*parser).document
+     76458  0.25% 77.30%     464494  1.55%  go.yaml.in/yaml/v3.yaml_parser_parse_block_mapping_key
+     73857  0.25% 77.55%     237703  0.79%  go.yaml.in/yaml/v2.(*parser).scalar
+     65536  0.22% 77.76%     590488  1.97%  net/http.(*Client).do
+     65536  0.22% 77.98%    3231704 10.76%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).object
+     65536  0.22% 78.20%    1242066  4.14%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Map
+     58710   0.2% 78.40%     344503  1.15%  encoding/json.(*decodeState).object
+     57344  0.19% 78.59%    5009955 16.68%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Copy (inline)
+     50247  0.17% 78.75%    1842096  6.13%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.Filter
+     49152  0.16% 78.92%     410073  1.37%  go.yaml.in/yaml/v2.(*parser).mapping
+     48374  0.16% 79.08%     299370     1%  sigs.k8s.io/kustomize/kyaml/yaml.addMetadataNode
+     43691  0.15% 79.22%     249041  0.83%  sigs.k8s.io/kustomize/kyaml/yaml.ClearEmptyAnnotations
+     43690  0.15% 79.37%     221846  0.74%  go.yaml.in/yaml/v3.(*encoder).marshal.(*encoder).mapv.func1
+     43690  0.15% 79.51%     920236  3.06%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.(*TransformerConfig).sortFields
+     43208  0.14% 79.66%     266436  0.89%  k8s.io/api/rbac/v1.(*RoleBinding).DeepCopy
+     40962  0.14% 79.80%     223228  0.74%  k8s.io/api/rbac/v1.(*RoleBinding).DeepCopyInto
+     37787  0.13% 79.92%     847332  2.82%  k8s.io/api/rbac/v1.(*ClusterRole).DeepCopyInto
+     37694  0.13% 80.05%     885026  2.95%  k8s.io/api/rbac/v1.(*ClusterRole).DeepCopy
+     35465  0.12% 80.16%     250817  0.84%  k8s.io/client-go/rest.Request.finalURLTemplate
+     35294  0.12% 80.28%    3299449 10.99%  sigs.k8s.io/json/internal/golang/encoding/json.Unmarshal
+     34953  0.12% 80.40%     206474  0.69%  runtime/pprof.writeHeapInternal
+     32768  0.11% 80.51%     229376  0.76%  go.yaml.in/yaml/v2.(*decoder).scalar
+     32768  0.11% 80.62%     230156  0.77%  go.yaml.in/yaml/v2.yaml_parser_parse_document_start
+     29129 0.097% 80.71%     433251  1.44%  encoding/json.Unmarshal
+     26217 0.087% 80.80%     207438  0.69%  k8s.io/apimachinery/pkg/util/net.CloneRequest (inline)
+     23405 0.078% 80.88%     231487  0.77%  sigs.k8s.io/kustomize/kyaml/yaml.FieldMatcher.Filter
+     22004 0.073% 80.95%     920772  3.07%  encoding/json.Marshal
+     21846 0.073% 81.02%     729117  2.43%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.(*Unstructured).MarshalJSON
+     21846 0.073% 81.10%    3071505 10.23%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.decodeToUnstructured
+     21846 0.073% 81.17%    1079366  3.59%  k8s.io/apimachinery/pkg/runtime.(*unstructuredConverter).ToUnstructured
+     19663 0.065% 81.24%    1176024  3.92%  sigs.k8s.io/kustomize/api/internal/accumulator.(*nameReferenceTransformer).Transform
+     19115 0.064% 81.30%    3690447 12.29%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).apply
+     18569 0.062% 81.36%    7343810 24.45%  sigs.k8s.io/kustomize/kyaml/kio.(*ByteReader).Read
+     16703 0.056% 81.42%     385055  1.28%  k8s.io/client-go/transport.(*bearerAuthRoundTripper).RoundTrip
+     16385 0.055% 81.47%     854541  2.85%  sigs.k8s.io/kustomize/api/filters/labels.Filter.Filter.func1
+     16385 0.055% 81.53%     415137  1.38%  sigs.k8s.io/kustomize/api/filters/namespace.Filter.run
+     16384 0.055% 81.58%    3706831 12.34%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).applyWithMode
+     16220 0.054% 81.63%    1080094  3.60%  sigs.k8s.io/kustomize/api/filters/nameref.Filter.run
+     15604 0.052% 81.69%     353418  1.18%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).LoadMapIntoConfigMapData
+     13108 0.044% 81.73%     214952  0.72%  regexp.compile
+     13108 0.044% 81.77%     160437  0.53%  sigs.k8s.io/kustomize/kyaml/yaml.(*PathMatcher).doField
+     10923 0.036% 81.81%    3149784 10.49%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.Decode
+     10923 0.036% 81.85%     253991  0.85%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+     10923 0.036% 81.88%     303042  1.01%  sigs.k8s.io/kustomize/api/internal/target.init.func5
+     10923 0.036% 81.92%    1729370  5.76%  sigs.k8s.io/kustomize/kyaml/kio.(*ByteReader).decode
+     10922 0.036% 81.96%    1051113  3.50%  sigs.k8s.io/kustomize/api/internal/builtins.(*NamespaceTransformerPlugin).Transform
+     10423 0.035% 81.99%     167836  0.56%  k8s.io/api/rbac/v1.(*Role).DeepCopyInto
+      9104  0.03% 82.02%     176940  0.59%  k8s.io/api/rbac/v1.(*Role).DeepCopy
+      8938  0.03% 82.05%    1089032  3.63%  sigs.k8s.io/kustomize/api/filters/nameref.Filter.Filter

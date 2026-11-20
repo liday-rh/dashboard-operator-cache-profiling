@@ -1,0 +1,107 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: inuse_space
+Time: 2026-11-19 18:38:00 GMT
+Showing nodes accounting for 10788.59kB, 100% of 10788.59kB total
+Showing top 100 nodes out of 117
+      flat  flat%   sum%        cum   cum%
+ 2569.45kB 23.82% 23.82%  2569.45kB 23.82%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+ 2048.50kB 18.99% 42.80%  2048.50kB 18.99%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+ 1025.56kB  9.51% 52.31%  1025.56kB  9.51%  runtime.mallocgc
+  522.70kB  4.84% 57.15%   522.70kB  4.84%  k8s.io/apimachinery/pkg/conversion.ConversionFuncs.AddUntyped
+  518.02kB  4.80% 61.96%   518.02kB  4.80%  regexp/syntax.(*compiler).inst (inline)
+  514.63kB  4.77% 66.73%   514.63kB  4.77%  k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode
+     514kB  4.76% 71.49%  1036.70kB  9.61%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypeWithName
+     514kB  4.76% 76.26%      514kB  4.76%  regexp.(*bitState).reset
+  512.88kB  4.75% 81.01%   512.88kB  4.75%  github.com/prometheus/client_golang/prometheus.(*Registry).Register
+  512.69kB  4.75% 85.76%   512.69kB  4.75%  runtime/metrics.runtime_readMetrics
+  512.14kB  4.75% 90.51%   512.14kB  4.75%  k8s.io/api/flowcontrol/v1.init
+  512.02kB  4.75% 95.25%   512.02kB  4.75%  regexp.mergeRuneSets.func2 (inline)
+  512.01kB  4.75%   100%   512.01kB  4.75%  encoding/json.(*decodeState).literalStore
+         0     0%   100%   512.01kB  4.75%  encoding/json.(*decodeState).array
+         0     0%   100%   512.01kB  4.75%  encoding/json.(*decodeState).object
+         0     0%   100%   512.01kB  4.75%  encoding/json.(*decodeState).unmarshal
+         0     0%   100%   512.01kB  4.75%  encoding/json.(*decodeState).value
+         0     0%   100%   512.01kB  4.75%  encoding/json.Unmarshal
+         0     0%   100%      514kB  4.76%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).Reconcile
+         0     0%   100%      514kB  4.76%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deployModuleManifests
+         0     0%   100%      514kB  4.76%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcile
+         0     0%   100%      514kB  4.76%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileDeployment
+         0     0%   100%      514kB  4.76%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileModuleDemand
+         0     0%   100%  3081.46kB 28.56%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.ManagerCacheOptions
+         0     0%   100%  3081.46kB 28.56%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.apiResourceAvailable
+         0     0%   100%  3081.46kB 28.56%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.optionalOwnedResources
+         0     0%   100%      514kB  4.76%  github.com/opendatahub-io/odh-platform-utilities/pkg/render/kustomize.(*Engine).Render
+         0     0%   100%   512.69kB  4.75%  github.com/prometheus/client_golang/prometheus.(*Registry).Gather.func1
+         0     0%   100%   512.88kB  4.75%  github.com/prometheus/client_golang/prometheus.(*Registry).MustRegister
+         0     0%   100%   512.69kB  4.75%  github.com/prometheus/client_golang/prometheus.(*goCollector).Collect
+         0     0%   100%   512.88kB  4.75%  github.com/prometheus/client_golang/prometheus.MustRegister (inline)
+         0     0%   100%   512.88kB  4.75%  github.com/prometheus/client_golang/prometheus.init.0
+         0     0%   100%  1536.36kB 14.24%  k8s.io/api/core/v1.(*Namespace).Unmarshal
+         0     0%   100%   512.14kB  4.75%  k8s.io/api/networking/v1.(*NetworkPolicy).Unmarshal
+         0     0%   100%   522.70kB  4.84%  k8s.io/api/node/v1.addKnownTypes
+         0     0%   100%      514kB  4.76%  k8s.io/api/policy/v1.addKnownTypes
+         0     0%   100%  1027.13kB  9.52%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).Add
+         0     0%   100%      514kB  4.76%  k8s.io/apimachinery/pkg/apis/meta/v1.AddToGroupVersion
+         0     0%   100%   522.70kB  4.84%  k8s.io/apimachinery/pkg/conversion.(*Converter).RegisterGeneratedUntypedConversionFunc (inline)
+         0     0%   100%   522.70kB  4.84%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddGeneratedConversionFunc (inline)
+         0     0%   100%  1036.70kB  9.61%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypes
+         0     0%   100%  1036.70kB  9.61%  k8s.io/apimachinery/pkg/runtime.(*SchemeBuilder).AddToScheme
+         0     0%   100%  2048.50kB 18.99%  k8s.io/apimachinery/pkg/runtime.Decode (inline)
+         0     0%   100%  2048.50kB 18.99%  k8s.io/apimachinery/pkg/runtime.WithoutVersionDecoder.Decode
+         0     0%   100%  2048.50kB 18.99%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+         0     0%   100%  2048.50kB 18.99%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.unmarshalToObject
+         0     0%   100%  2563.13kB 23.76%  k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive
+         0     0%   100%   512.01kB  4.75%  k8s.io/client-go/discovery.(*DiscoveryClient).GroupsAndMaybeResources
+         0     0%   100%   512.01kB  4.75%  k8s.io/client-go/discovery.(*DiscoveryClient).downloadAPIs
+         0     0%   100%      514kB  4.76%  k8s.io/client-go/kubernetes/scheme.init.0
+         0     0%   100%  2563.13kB 23.76%  k8s.io/client-go/rest/watch.(*Decoder).Decode
+         0     0%   100%  2569.45kB 23.82%  k8s.io/client-go/restmapper.NewDiscoveryRESTMapper
+         0     0%   100%  3081.46kB 28.56%  main.main
+         0     0%   100%  3081.46kB 28.56%  main.main.NewManagerCache.func5
+         0     0%   100%   512.02kB  4.75%  oras.land/oras-go/v2/registry.init
+         0     0%   100%      514kB  4.76%  regexp.(*Regexp).MatchString (inline)
+         0     0%   100%      514kB  4.76%  regexp.(*Regexp).backtrack
+         0     0%   100%      514kB  4.76%  regexp.(*Regexp).doExecute
+         0     0%   100%      514kB  4.76%  regexp.(*Regexp).doMatch (inline)
+         0     0%   100%   512.02kB  4.75%  regexp.Compile (inline)
+         0     0%   100%   512.02kB  4.75%  regexp.MustCompile
+         0     0%   100%   512.02kB  4.75%  regexp.compile
+         0     0%   100%   512.02kB  4.75%  regexp.compileOnePass
+         0     0%   100%   512.02kB  4.75%  regexp.makeOnePass
+         0     0%   100%   512.02kB  4.75%  regexp.makeOnePass.func1
+         0     0%   100%   512.02kB  4.75%  regexp.mergeRuneSets
+         0     0%   100%   518.02kB  4.80%  regexp/syntax.(*compiler).compile
+         0     0%   100%   518.02kB  4.80%  regexp/syntax.(*compiler).quest
+         0     0%   100%  1025.56kB  9.51%  runtime.allocm
+         0     0%   100%  2573.73kB 23.86%  runtime.doInit (inline)
+         0     0%   100%  2573.73kB 23.86%  runtime.doInit1
+         0     0%   100%   512.56kB  4.75%  runtime.mProfStackInit (inline)
+         0     0%   100%  5655.19kB 52.42%  runtime.main
+         0     0%   100%   512.56kB  4.75%  runtime.makeProfStackFP (inline)
+         0     0%   100%   512.56kB  4.75%  runtime.makeslice
+         0     0%   100%  1025.56kB  9.51%  runtime.mcall
+         0     0%   100%   512.56kB  4.75%  runtime.mcommoninit
+         0     0%   100%  1025.56kB  9.51%  runtime.newm
+         0     0%   100%      513kB  4.76%  runtime.newobject
+         0     0%   100%  1025.56kB  9.51%  runtime.park_m
+         0     0%   100%  1025.56kB  9.51%  runtime.resetspinning
+         0     0%   100%  1025.56kB  9.51%  runtime.schedule
+         0     0%   100%  1025.56kB  9.51%  runtime.startm
+         0     0%   100%  1025.56kB  9.51%  runtime.wakep
+         0     0%   100%   512.69kB  4.75%  runtime/metrics.Read (inline)
+         0     0%   100%  3081.46kB 28.56%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).RESTMapping
+         0     0%   100%  2569.45kB 23.82%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+         0     0%   100%  3081.46kB 28.56%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addKnownGroupAndReload
+         0     0%   100%  3081.46kB 28.56%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).findAPIGroupByNameAndMaybeAggregatedDiscoveryLocked
+         0     0%   100%   522.70kB  4.84%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.init.0
+         0     0%   100%  2048.50kB 18.99%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.targetZeroingDecoder.Decode
+         0     0%   100%  3081.46kB 28.56%  sigs.k8s.io/controller-runtime/pkg/cluster.New
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).Reconcile
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).Start.func1.1
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).processNextWorkItem
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).reconcileHandler
+         0     0%   100%  3081.46kB 28.56%  sigs.k8s.io/controller-runtime/pkg/manager.New
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/kustomize/api/filters/replacement.Filter.Filter
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/kustomize/api/filters/replacement.applyReplacement
+         0     0%   100%      514kB  4.76%  sigs.k8s.io/kustomize/api/filters/replacement.copyValueToTarget

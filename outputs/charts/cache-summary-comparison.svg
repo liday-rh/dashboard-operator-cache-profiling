@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard operator memory before and after cache optimization</title>
+  <desc id="desc">Two grouped bar charts compare median working set and forced-GC retained heap for the 350 namespace and ConfigMap payload workloads. Post-optimization values are substantially lower.</desc>
+  <rect width="1400" height="700" fill="#ffffff"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #202124; }
+    .title { font-size: 30px; font-weight: 600; }
+    .subtitle { font-size: 18px; fill: #5f6368; }
+    .axis { font-size: 16px; fill: #5f6368; }
+    .group { font-size: 18px; font-weight: 600; }
+    .value { font-size: 17px; font-weight: 600; }
+    .reduction { font-size: 17px; font-weight: 600; fill: #0072b2; }
+    .grid { stroke: #dfe3e8; stroke-width: 1; }
+    .baseline { stroke: #9aa0a6; stroke-width: 2; }
+    .limit { stroke: #5f6368; stroke-width: 2; stroke-dasharray: 8 7; }
+    .pre { fill: #d55e00; }
+    .post { fill: #0072b2; }
+  </style>
+
+  <text x="70" y="52" class="title">Memory footprint comparison</text>
+  <rect x="1050" y="30" width="20" height="20" rx="2" class="pre"/><text x="1080" y="47" class="axis">Pre-optimization</text>
+  <rect x="1050" y="60" width="20" height="20" rx="2" class="post"/><text x="1080" y="77" class="axis">Post-optimization</text>
+
+  <!-- Working set panel -->
+  <text x="70" y="112" class="title">Median working set</text>
+  <text x="70" y="140" class="subtitle">MiB · lower is better</text>
+  <line x1="90" y1="530" x2="660" y2="530" class="baseline"/>
+  <line x1="90" y1="455" x2="660" y2="455" class="grid"/>
+  <line x1="90" y1="380" x2="660" y2="380" class="limit"/>
+  <line x1="90" y1="305" x2="660" y2="305" class="grid"/>
+  <line x1="90" y1="230" x2="660" y2="230" class="grid"/>
+  <line x1="90" y1="155" x2="660" y2="155" class="grid"/>
+  <text x="78" y="536" text-anchor="end" class="axis">0</text>
+  <text x="78" y="461" text-anchor="end" class="axis">128</text>
+  <text x="78" y="386" text-anchor="end" class="axis">256</text>
+  <text x="78" y="311" text-anchor="end" class="axis">384</text>
+  <text x="78" y="236" text-anchor="end" class="axis">512</text>
+  <text x="78" y="161" text-anchor="end" class="axis">640</text>
+  <text x="650" y="371" text-anchor="end" class="axis">256 MiB limit</text>
+
+  <rect x="175" y="342.5" width="76" height="187.5" rx="3" class="pre"/>
+  <rect x="265" y="507.1" width="76" height="22.9" rx="3" class="post"/>
+  <text x="213" y="333" text-anchor="middle" class="value">320</text>
+  <text x="303" y="498" text-anchor="middle" class="value">39</text>
+  <text x="258" y="574" text-anchor="middle" class="group">350 namespaces</text>
+  <text x="258" y="602" text-anchor="middle" class="reduction">87.8% lower</text>
+
+  <rect x="425" y="148.0" width="76" height="382.0" rx="3" class="pre"/>
+  <rect x="515" y="508.9" width="76" height="21.1" rx="3" class="post"/>
+  <text x="463" y="139" text-anchor="middle" class="value">652</text>
+  <text x="553" y="500" text-anchor="middle" class="value">36</text>
+  <text x="508" y="574" text-anchor="middle" class="group">ConfigMap payload</text>
+  <text x="508" y="602" text-anchor="middle" class="reduction">94.5% lower</text>
+
+  <!-- Retained heap panel -->
+  <text x="750" y="112" class="title">Forced-GC retained heap</text>
+  <text x="750" y="140" class="subtitle">MiB · pprof in-use space</text>
+  <line x1="770" y1="530" x2="1340" y2="530" class="baseline"/>
+  <line x1="770" y1="436.8" x2="1340" y2="436.8" class="grid"/>
+  <line x1="770" y1="343.6" x2="1340" y2="343.6" class="grid"/>
+  <line x1="770" y1="250.5" x2="1340" y2="250.5" class="grid"/>
+  <line x1="770" y1="157.3" x2="1340" y2="157.3" class="grid"/>
+  <text x="758" y="536" text-anchor="end" class="axis">0</text>
+  <text x="758" y="443" text-anchor="end" class="axis">50</text>
+  <text x="758" y="350" text-anchor="end" class="axis">100</text>
+  <text x="758" y="257" text-anchor="end" class="axis">150</text>
+  <text x="758" y="163" text-anchor="end" class="axis">200</text>
+
+  <rect x="855" y="271.6" width="76" height="258.4" rx="3" class="pre"/>
+  <rect x="945" y="510.4" width="76" height="19.6" rx="3" class="post"/>
+  <text x="893" y="262" text-anchor="middle" class="value">138.68</text>
+  <text x="983" y="501" text-anchor="middle" class="value">10.54</text>
+  <text x="938" y="574" text-anchor="middle" class="group">350 namespaces</text>
+  <text x="938" y="602" text-anchor="middle" class="reduction">92.4% lower</text>
+
+  <rect x="1105" y="148.4" width="76" height="381.6" rx="3" class="pre"/>
+  <rect x="1195" y="517.7" width="76" height="12.3" rx="3" class="post"/>
+  <text x="1143" y="139" text-anchor="middle" class="value">204.78</text>
+  <text x="1233" y="508" text-anchor="middle" class="value">6.61</text>
+  <text x="1188" y="574" text-anchor="middle" class="group">ConfigMap payload</text>
+  <text x="1188" y="602" text-anchor="middle" class="reduction">96.8% lower</text>
+
+  <text x="700" y="665" text-anchor="middle" class="subtitle">Post-optimization stayed below 50 MiB working set in both workloads.</text>
+</svg>

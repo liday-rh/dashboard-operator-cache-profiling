@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard operator working set over the benchmark windows</title>
+  <desc id="desc">Line chart showing pre and post optimization working set for the 350 namespace and ConfigMap payload workloads. Pre values remain above the 256 MiB limit; post values remain below 50 MiB.</desc>
+  <rect width="1400" height="700" fill="#ffffff"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #202124; }
+    .title { font-size: 30px; font-weight: 600; }
+    .subtitle { font-size: 18px; fill: #5f6368; }
+    .axis { font-size: 16px; fill: #5f6368; }
+    .legend { font-size: 17px; }
+    .grid { stroke: #dfe3e8; stroke-width: 1; }
+    .baseline { stroke: #9aa0a6; stroke-width: 2; }
+    .limit { stroke: #5f6368; stroke-width: 2; stroke-dasharray: 8 7; }
+    .pre { fill: none; stroke: #d55e00; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+    .post { fill: none; stroke: #0072b2; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+    .payload { stroke-dasharray: 11 7; }
+  </style>
+
+  <text x="70" y="50" class="title">Working set over time</text>
+  <text x="70" y="78" class="subtitle">20 samples over approximately 10 minutes · MiB</text>
+
+  <line x1="100" y1="580" x2="1260" y2="580" class="baseline"/>
+  <line x1="100" y1="511.4" x2="1260" y2="511.4" class="grid"/>
+  <line x1="100" y1="442.9" x2="1260" y2="442.9" class="grid"/>
+  <line x1="100" y1="374.3" x2="1260" y2="374.3" class="grid"/>
+  <line x1="100" y1="404.5" x2="1260" y2="404.5" class="limit"/>
+  <line x1="100" y1="305.7" x2="1260" y2="305.7" class="grid"/>
+  <line x1="100" y1="237.1" x2="1260" y2="237.1" class="grid"/>
+  <line x1="100" y1="168.6" x2="1260" y2="168.6" class="grid"/>
+  <line x1="100" y1="100" x2="1260" y2="100" class="grid"/>
+  <text x="88" y="586" text-anchor="end" class="axis">0</text>
+  <text x="88" y="518" text-anchor="end" class="axis">100</text>
+  <text x="88" y="449" text-anchor="end" class="axis">200</text>
+  <text x="88" y="380" text-anchor="end" class="axis">300</text>
+  <text x="88" y="312" text-anchor="end" class="axis">400</text>
+  <text x="88" y="243" text-anchor="end" class="axis">500</text>
+  <text x="88" y="175" text-anchor="end" class="axis">600</text>
+  <text x="88" y="106" text-anchor="end" class="axis">700</text>
+  <text x="1248" y="395" text-anchor="end" class="axis">256 MiB product limit</text>
+  <text x="100" y="612" class="axis">0 min</text>
+  <text x="680" y="612" text-anchor="middle" class="axis">5 min</text>
+  <text x="1260" y="612" text-anchor="end" class="axis">10 min</text>
+
+  <polyline class="pre" points="100.0,367.4 161.1,367.4 222.1,362.6 283.2,362.6 344.2,362.6 405.3,361.9 466.3,364.7 527.4,364.7 588.4,363.3 649.5,364.7 710.5,358.5 771.6,358.5 832.6,356.5 893.7,354.4 954.7,359.2 1015.8,359.2 1076.8,357.1 1137.9,357.1 1198.9,356.5 1260.0,355.1"/>
+  <polyline class="post" points="100.0,553.9 161.1,553.9 222.1,553.9 283.2,553.9 344.2,553.9 405.3,553.9 466.3,553.9 527.4,553.9 588.4,549.8 649.5,549.8 710.5,549.8 771.6,549.1 832.6,549.8 893.7,549.8 954.7,553.3 1015.8,553.3 1076.8,553.3 1137.9,545.7 1198.9,550.5 1260.0,550.5"/>
+  <polyline class="pre payload" points="100.0,141.1 161.1,138.4 222.1,136.3 283.2,135.7 344.2,136.3 405.3,136.3 466.3,136.3 527.4,136.3 588.4,133.6 649.5,132.9 710.5,132.9 771.6,132.9 832.6,132.9 893.7,132.9 954.7,132.9 1015.8,132.9 1076.8,132.9 1137.9,132.9 1198.9,132.9 1260.0,132.9"/>
+  <polyline class="post payload" points="100.0,568.3 161.1,556.7 222.1,556.7 283.2,556.0 344.2,556.7 405.3,556.0 466.3,557.4 527.4,557.4 588.4,557.4 649.5,557.4 710.5,553.3 771.6,553.3 832.6,553.3 893.7,553.9 954.7,553.9 1015.8,553.9 1076.8,553.9 1137.9,554.6 1198.9,551.9 1260.0,551.9"/>
+
+  <line x1="140" y1="650" x2="190" y2="650" class="pre"/><text x="202" y="656" class="legend">Pre · 350 namespaces</text>
+  <line x1="420" y1="650" x2="470" y2="650" class="post"/><text x="482" y="656" class="legend">Post · 350 namespaces</text>
+  <line x1="720" y1="650" x2="770" y2="650" class="pre payload"/><text x="782" y="656" class="legend">Pre · payload</text>
+  <line x1="990" y1="650" x2="1040" y2="650" class="post payload"/><text x="1052" y="656" class="legend">Post · payload</text>
+</svg>

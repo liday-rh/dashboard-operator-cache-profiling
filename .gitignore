@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+.vscode/
+.venv/
+**/__pycache__/
+*.py[cod]
+
+# Local cluster credentials and temporary build workspaces.
+work/
+*kubeconfig*
+
+# Local environment overrides.
+.env
+.env.*
+!.env.example

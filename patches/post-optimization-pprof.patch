@@ -1,0 +1,87 @@
+diff --git a/dashboard-operator/Dockerfile b/dashboard-operator/Dockerfile
+index 0a41b5519..51e30804a 100644
+--- a/dashboard-operator/Dockerfile
++++ b/dashboard-operator/Dockerfile
+@@ -17,17 +17,6 @@ RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH:-amd64} go build -
+     -ldflags="-s -w -X 'github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.Version=${OPERATOR_VERSION}'" \
+     -o /tmp/manager ./cmd/manager
+ 
+-FROM registry.access.redhat.com/ubi9/ubi-minimal:9.3
++FROM quay.io/opendatahub/odh-dashboard-operator@sha256:8b8a0036cf8ca2c52e53ce3078d26f2683c843bb58af6542e4f02cae94622766
+ 
+-WORKDIR /
+-
+-COPY --from=builder /tmp/manager .
+-COPY --chown=65532:0 manifests/ /opt/manifests/dashboard/
+-RUN chmod -R g+w /opt/manifests/dashboard/modules/ \
+-    && chmod g+w /opt/manifests/dashboard/odh/params.env \
+-    && chmod g+w /opt/manifests/dashboard/rhoai/params.env \
+-    && chmod g+w /opt/manifests/dashboard/distributions/maas-portal/params.env
+-
+-USER 65532:65532
+-
+-ENTRYPOINT ["/manager"]
++COPY --from=builder /tmp/manager /manager
+diff --git a/dashboard-operator/cmd/manager/main.go b/dashboard-operator/cmd/manager/main.go
+index f61dd0a7f..44b03b562 100644
+--- a/dashboard-operator/cmd/manager/main.go
++++ b/dashboard-operator/cmd/manager/main.go
+@@ -2,9 +2,13 @@ package main
+ 
+ import (
+ 	"context"
++	"errors"
+ 	"flag"
+ 	"fmt"
++	"net/http"
++	_ "net/http/pprof"
+ 	"os"
++	"time"
+ 
+ 	routev1 "github.com/openshift/api/route/v1"
+ 	corev1 "k8s.io/api/core/v1"
+@@ -47,6 +51,7 @@ func main() {
+ 		secureMetrics     bool
+ 		operatorNamespace string
+ 		enableWebhook     bool
++		enablePprof       bool
+ 		webhookPort       int
+ 	)
+ 
+@@ -57,6 +62,7 @@ func main() {
+ 	flag.BoolVar(&secureMetrics, "secure-metrics", true, "Serve metrics over HTTPS using cert-manager certificates")
+ 	flag.StringVar(&operatorNamespace, "namespace", "", "Namespace where the operator is deployed")
+ 	flag.BoolVar(&enableWebhook, "enable-webhook", false, "Enable the validating webhook server (requires TLS certs)")
++	flag.BoolVar(&enablePprof, "enable-pprof", true, "Enable the diagnostic pprof server on 127.0.0.1:6060")
+ 	flag.IntVar(&webhookPort, "webhook-port", 9443, "Port the webhook server binds to")
+ 
+ 	opts := zap.Options{Development: true}
+@@ -151,6 +157,28 @@ func main() {
+ 	}
+ 
+ 	ctx, cancel := context.WithCancel(ctrl.SetupSignalHandler())
++	if enablePprof {
++		const pprofAddr = "127.0.0.1:6060"
++		pprofServer := &http.Server{
++			Addr:              pprofAddr,
++			ReadHeaderTimeout: 5 * time.Second,
++		}
++		go func() {
++			setupLog.Info("Starting diagnostic pprof server", "address", pprofAddr)
++			if err := pprofServer.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
++				setupLog.Error(err, "diagnostic pprof server failed")
++				cancel()
++			}
++		}()
++		go func() {
++			<-ctx.Done()
++			shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
++			defer shutdownCancel()
++			if err := pprofServer.Shutdown(shutdownCtx); err != nil {
++				setupLog.Error(err, "unable to stop diagnostic pprof server")
++			}
++		}()
++	}
+ 
+ 	if tlsResult.APIAvailable {
+ 		watcher := &pkgtls.ProfileWatcher{

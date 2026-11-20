@@ -1,0 +1,108 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: alloc_space
+Time: 2026-11-19 18:38:00 GMT
+Showing nodes accounting for 98.79MB, 82.73% of 119.42MB total
+Dropped 213 nodes (cum <= 0.60MB)
+Showing top 100 nodes out of 445
+      flat  flat%   sum%        cum   cum%
+      11MB  9.21%  9.21%       11MB  9.21%  sigs.k8s.io/kustomize/kyaml/yaml.CopyYNode
+    5.02MB  4.20% 13.42%     5.02MB  4.20%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+    4.21MB  3.52% 16.94%     4.21MB  3.52%  go.yaml.in/yaml/v3.read
+    4.11MB  3.44% 20.38%     4.11MB  3.44%  io.ReadAll
+    3.55MB  2.98% 23.36%     9.06MB  7.58%  k8s.io/apimachinery/pkg/api/meta.PriorityRESTMapper.RESTMapping
+    3.31MB  2.77% 26.13%     3.31MB  2.77%  go.yaml.in/yaml/v3.yaml_emitter_emit
+    3.21MB  2.69% 28.82%     3.21MB  2.69%  os.readFileContents
+       3MB  2.51% 31.34%        3MB  2.51%  reflect.mapassign_faststr0
+       3MB  2.51% 33.85%        3MB  2.51%  k8s.io/apimachinery/pkg/runtime.DeepCopyJSONValue
+       3MB  2.51% 36.36%        3MB  2.51%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).RESTMappings
+    2.83MB  2.37% 38.73%     2.83MB  2.37%  sigs.k8s.io/json/internal/golang/encoding/json.unquoteBytes
+    2.50MB  2.09% 40.83%     2.50MB  2.09%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+    2.50MB  2.09% 42.92%     2.50MB  2.09%  k8s.io/apimachinery/pkg/api/meta.IsNoMatchError
+    2.25MB  1.88% 44.80%     2.25MB  1.88%  bytes.growSlice
+    2.11MB  1.77% 46.57%     4.94MB  4.14%  sigs.k8s.io/json/internal/golang/encoding/json.unquote (inline)
+       2MB  1.68% 48.25%        2MB  1.68%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.nbrSlice.mergeOne
+       2MB  1.68% 49.92%        2MB  1.68%  os.lstatNolog
+    1.51MB  1.26% 51.18%     1.51MB  1.26%  go.yaml.in/yaml/v2.yaml_insert_token
+    1.51MB  1.26% 52.45%     1.51MB  1.26%  regexp/syntax.(*compiler).inst (inline)
+    1.51MB  1.26% 53.71%     1.51MB  1.26%  golang.org/x/net/http2.init.func3
+    1.50MB  1.26% 54.96%     1.50MB  1.26%  k8s.io/apimachinery/pkg/runtime.(*RawExtension).Unmarshal
+    1.50MB  1.26% 56.22%     6.44MB  5.39%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).objectInterface
+    1.50MB  1.26% 57.48%     1.50MB  1.26%  go.yaml.in/yaml/v3.(*parser).node
+    1.50MB  1.26% 58.73%     1.50MB  1.26%  golang.org/x/net/http2.(*ClientConn).internalRoundTrip
+    1.50MB  1.26% 59.99%     1.50MB  1.26%  reflect.unsafe_New
+    1.12MB  0.94% 60.93%     3.29MB  2.75%  encoding/json.Marshal
+    1.01MB  0.84% 61.77%     1.01MB  0.84%  golang.org/x/net/http2.init.func4
+    1.01MB  0.84% 62.61%     1.01MB  0.84%  sigs.k8s.io/kustomize/api/types.FsSlice.DeepCopy (inline)
+       1MB  0.84% 63.45%     1.51MB  1.27%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypeWithName
+       1MB  0.84% 64.29%        3MB  2.51%  k8s.io/client-go/transport.(*bearerAuthRoundTripper).RoundTrip
+       1MB  0.84% 65.13%        1MB  0.84%  runtime.mallocgc
+       1MB  0.84% 65.97%        1MB  0.84%  go.yaml.in/yaml/v2.yaml_parser_initialize (inline)
+       1MB  0.84% 66.81%        1MB  0.84%  k8s.io/apimachinery/pkg/util/net.CloneHeader (inline)
+       1MB  0.84% 67.64%        1MB  0.84%  reflect.mapassign0
+       1MB  0.84% 68.48%        1MB  0.84%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.fieldFilter (inline)
+       1MB  0.84% 69.32%     1.50MB  1.26%  k8s.io/client-go/rest.(*Request).URL
+       1MB  0.84% 70.16%        1MB  0.84%  crypto/internal/fips140/bigmod.NewNat (inline)
+       1MB  0.84% 70.99%        1MB  0.84%  reflect.growslice
+       1MB  0.84% 71.83%        1MB  0.84%  sigs.k8s.io/kustomize/kyaml/yaml.NewRNode (inline)
+       1MB  0.84% 72.67%        1MB  0.84%  github.com/santhosh-tekuri/jsonschema/v6.SchemaPath.collect
+       1MB  0.84% 73.51%        1MB  0.84%  regexp.mergeRuneSets.func2
+       1MB  0.84% 74.34%        1MB  0.84%  encoding/json.(*decodeState).literalStore
+       1MB  0.84% 75.18%        1MB  0.84%  internal/bytealg.MakeNoZero
+    0.51MB  0.42% 75.61%     2.01MB  1.68%  go.yaml.in/yaml/v3.(*parser).scalar
+    0.50MB  0.42% 76.03%     2.01MB  1.68%  k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode
+    0.50MB  0.42% 76.45%        1MB  0.84%  k8s.io/api/apps/v1.addKnownTypes
+    0.50MB  0.42% 76.86%        1MB  0.84%  go.yaml.in/yaml/v3.newEncoderWithWriter (inline)
+    0.50MB  0.42% 77.28%        1MB  0.84%  sigs.k8s.io/kustomize/api/kv.(*loader).keyValuesFromEnvFiles
+    0.50MB  0.42% 77.70%     1.50MB  1.26%  go.yaml.in/yaml/v2.newParser (inline)
+    0.50MB  0.42% 78.12%     1.50MB  1.26%  sigs.k8s.io/kustomize/api/internal/target.(*KustTarget).Load
+    0.50MB  0.42% 78.54%        1MB  0.84%  k8s.io/client-go/rest.Request.finalURLTemplate
+    0.50MB  0.42% 78.96%     1.50MB  1.26%  k8s.io/apimachinery/pkg/util/net.CloneRequest (inline)
+    0.50MB  0.42% 79.38%     8.44MB  7.07%  sigs.k8s.io/json/internal/golang/encoding/json.Unmarshal
+    0.50MB  0.42% 79.80%        1MB  0.84%  sigs.k8s.io/kustomize/api/internal/target.init.func2
+    0.50MB  0.42% 80.22%     2.50MB  2.09%  path/filepath.walkSymlinks
+    0.50MB  0.42% 80.63%        1MB  0.84%  path.Join
+    0.50MB  0.42% 81.05%        1MB  0.84%  k8s.io/apimachinery/pkg/apis/meta/v1.AddToGroupVersion
+    0.50MB  0.42% 81.47%        5MB  4.19%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Pipe
+    0.50MB  0.42% 81.89%     5.52MB  4.62%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+    0.50MB  0.42% 82.31%     4.02MB  3.37%  golang.org/x/net/http2.(*dataBuffer).lastChunkOrAlloc
+    0.50MB  0.42% 82.73%     1.50MB  1.26%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Field.func1
+         0     0% 82.73%     1.67MB  1.40%  bytes.(*Buffer).Write
+         0     0% 82.73%     2.25MB  1.88%  bytes.(*Buffer).grow
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/bigmod.NewModulus
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/bigmod.newModulus
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/bigmod.rr
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/rsa.GenerateKey
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/rsa.isPrime
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/rsa.millerRabinSetup
+         0     0% 82.73%        1MB  0.84%  crypto/internal/fips140/rsa.randomPrime
+         0     0% 82.73%        1MB  0.84%  crypto/rsa.GenerateKey
+         0     0% 82.73%        1MB  0.84%  crypto/tls.(*Conn).HandshakeContext
+         0     0% 82.73%        1MB  0.84%  crypto/tls.(*Conn).handshakeContext
+         0     0% 82.73%        1MB  0.84%  crypto/tls.(*Conn).serverHandshake
+         0     0% 82.73%        1MB  0.84%  crypto/tls.(*serverHandshakeStateTLS13).handshake
+         0     0% 82.73%     1.09MB  0.91%  encoding/json.(*Encoder).Encode
+         0     0% 82.73%        2MB  1.67%  encoding/json.(*decodeState).array
+         0     0% 82.73%        3MB  2.51%  encoding/json.(*decodeState).object
+         0     0% 82.73%        3MB  2.51%  encoding/json.(*decodeState).unmarshal
+         0     0% 82.73%        3MB  2.51%  encoding/json.(*decodeState).value
+         0     0% 82.73%     2.17MB  1.82%  encoding/json.(*encodeState).marshal
+         0     0% 82.73%     2.17MB  1.82%  encoding/json.(*encodeState).reflectValue
+         0     0% 82.73%        3MB  2.51%  encoding/json.Unmarshal
+         0     0% 82.73%     1.67MB  1.40%  encoding/json.marshalerEncoder
+         0     0% 82.73%    80.28MB 67.23%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).Reconcile
+         0     0% 82.73%     1.51MB  1.26%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).cleanupManagedObservability
+         0     0% 82.73%     1.51MB  1.26%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).cleanupObservabilityResources
+         0     0% 82.73%     1.50MB  1.26%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteLegacyMaaSPortalResourceList
+         0     0% 82.73%        2MB  1.67%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteLegacyMaaSPortalResources
+         0     0% 82.73%     2.50MB  2.09%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteMaaSPortalResources
+         0     0% 82.73%     2.01MB  1.68%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteModuleResources
+         0     0% 82.73%    14.51MB 12.15%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deployModuleManifests
+         0     0% 82.73%    80.28MB 67.23%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcile
+         0     0% 82.73%    80.28MB 67.23%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileDeployment
+         0     0% 82.73%     2.50MB  2.09%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortal
+         0     0% 82.73%     2.50MB  2.09%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortalOperand
+         0     0% 82.73%    17.02MB 14.25%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileModuleDemand
+         0     0% 82.73%     1.51MB  1.26%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileObservability
+         0     0% 82.73%     2.50MB  2.09%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileRemovedMaaSPortal
+         0     0% 82.73%     4.02MB  3.37%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.ManagerCacheOptions

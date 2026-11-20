@@ -1,0 +1,70 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: inuse_space
+Time: 2026-11-19 18:25:37 GMT
+Showing nodes accounting for 6773.41kB, 100% of 6773.41kB total
+      flat  flat%   sum%        cum   cum%
+ 1027.63kB 15.17% 15.17%  1027.63kB 15.17%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+  596.16kB  8.80% 23.97%   596.16kB  8.80%  golang.org/x/net/http2.(*Framer).startWriteDataPadded
+  528.17kB  7.80% 31.77%   528.17kB  7.80%  k8s.io/apimachinery/pkg/watch.(*Broadcaster).Watch.func1
+  518.02kB  7.65% 39.42%   518.02kB  7.65%  google.golang.org/protobuf/types/descriptorpb.init
+  517.33kB  7.64% 47.06%   517.33kB  7.64%  golang.org/x/net/http2/hpack.(*headerFieldTable).addEntry (inline)
+  513.50kB  7.58% 54.64%   513.50kB  7.58%  k8s.io/client-go/discovery.convertAPIGroup
+  512.17kB  7.56% 62.20%   512.17kB  7.56%  reflect.unsafe_New
+  512.17kB  7.56% 69.76%  1539.80kB 22.73%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+  512.14kB  7.56% 77.32%   512.14kB  7.56%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+  512.06kB  7.56% 84.88%   512.06kB  7.56%  k8s.io/api/rbac/v1.(*PolicyRule).Unmarshal
+  512.03kB  7.56% 92.44%   512.03kB  7.56%  k8s.io/apimachinery/pkg/runtime/serializer.CodecFactory.WithoutConversion (inline)
+  512.02kB  7.56%   100%   512.02kB  7.56%  github.com/go-openapi/swag/jsonutils/adapters.(*Registrar).RegisterFor
+         0     0%   100%   512.02kB  7.56%  github.com/go-openapi/swag/jsonutils/adapters.NewRegistrar
+         0     0%   100%   512.02kB  7.56%  github.com/go-openapi/swag/jsonutils/adapters.init
+         0     0%   100%   512.02kB  7.56%  github.com/go-openapi/swag/jsonutils/adapters/stdlib/json.Register
+         0     0%   100%  2053.30kB 30.31%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.ManagerCacheOptions
+         0     0%   100%  2053.30kB 30.31%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.apiResourceAvailable
+         0     0%   100%  2053.30kB 30.31%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.optionalOwnedResources
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2.(*ClientConn).readLoop
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2.(*Framer).ReadFrame
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2.(*Framer).ReadFrameForHeader
+         0     0%   100%   596.16kB  8.80%  golang.org/x/net/http2.(*Framer).WriteData (inline)
+         0     0%   100%   596.16kB  8.80%  golang.org/x/net/http2.(*Framer).WriteDataPadded
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2.(*Framer).readMetaFrame
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2.(*clientConnReadLoop).run
+         0     0%   100%   596.16kB  8.80%  golang.org/x/net/http2.(*clientStream).doRequest
+         0     0%   100%   596.16kB  8.80%  golang.org/x/net/http2.(*clientStream).writeRequest
+         0     0%   100%   596.16kB  8.80%  golang.org/x/net/http2.(*clientStream).writeRequestBody
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2/hpack.(*Decoder).Write
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2/hpack.(*Decoder).parseFieldLiteral
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2/hpack.(*Decoder).parseHeaderFieldRepr
+         0     0%   100%   517.33kB  7.64%  golang.org/x/net/http2/hpack.(*dynamicTable).add
+         0     0%   100%   512.06kB  7.56%  k8s.io/api/rbac/v1.(*ClusterRole).Unmarshal
+         0     0%   100%   512.14kB  7.56%  k8s.io/api/rbac/v1.(*RoleBinding).Unmarshal
+         0     0%   100%   512.17kB  7.56%  k8s.io/apimachinery/pkg/runtime.(*Scheme).New
+         0     0%   100%  1536.38kB 22.68%  k8s.io/apimachinery/pkg/runtime.Decode (inline)
+         0     0%   100%   512.17kB  7.56%  k8s.io/apimachinery/pkg/runtime.UseOrCreateObject
+         0     0%   100%  1536.38kB 22.68%  k8s.io/apimachinery/pkg/runtime.WithoutVersionDecoder.Decode
+         0     0%   100%  1536.38kB 22.68%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+         0     0%   100%  1536.38kB 22.68%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.unmarshalToObject
+         0     0%   100%   528.17kB  7.80%  k8s.io/apimachinery/pkg/watch.(*Broadcaster).blockQueue.func1
+         0     0%   100%   528.17kB  7.80%  k8s.io/apimachinery/pkg/watch.(*Broadcaster).loop
+         0     0%   100%  1536.38kB 22.68%  k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive
+         0     0%   100%   513.50kB  7.58%  k8s.io/client-go/discovery.(*DiscoveryClient).GroupsAndMaybeResources
+         0     0%   100%   513.50kB  7.58%  k8s.io/client-go/discovery.(*DiscoveryClient).downloadAPIs
+         0     0%   100%   513.50kB  7.58%  k8s.io/client-go/discovery.SplitGroupsAndResources
+         0     0%   100%   512.03kB  7.56%  k8s.io/client-go/metadata.ConfigFor
+         0     0%   100%   512.03kB  7.56%  k8s.io/client-go/metadata.NewForConfigAndClient
+         0     0%   100%  1536.38kB 22.68%  k8s.io/client-go/rest/watch.(*Decoder).Decode
+         0     0%   100%  1027.63kB 15.17%  k8s.io/client-go/restmapper.NewDiscoveryRESTMapper
+         0     0%   100%  2565.33kB 37.87%  main.main
+         0     0%   100%  2053.30kB 30.31%  main.main.NewManagerCache.func5
+         0     0%   100%   512.17kB  7.56%  reflect.New
+         0     0%   100%  1030.05kB 15.21%  runtime.doInit (inline)
+         0     0%   100%  1030.05kB 15.21%  runtime.doInit1
+         0     0%   100%  3595.38kB 53.08%  runtime.main
+         0     0%   100%   512.03kB  7.56%  sigs.k8s.io/controller-runtime/pkg/client.New
+         0     0%   100%   512.03kB  7.56%  sigs.k8s.io/controller-runtime/pkg/client.newClient
+         0     0%   100%  2053.30kB 30.31%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).RESTMapping
+         0     0%   100%  2053.30kB 30.31%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addKnownGroupAndReload
+         0     0%   100%  2053.30kB 30.31%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).findAPIGroupByNameAndMaybeAggregatedDiscoveryLocked
+         0     0%   100%  1536.38kB 22.68%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.targetZeroingDecoder.Decode
+         0     0%   100%  2565.33kB 37.87%  sigs.k8s.io/controller-runtime/pkg/cluster.New
+         0     0%   100%  2565.33kB 37.87%  sigs.k8s.io/controller-runtime/pkg/manager.New

@@ -1,0 +1,108 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: alloc_space
+Time: 2026-11-19 18:25:37 GMT
+Showing nodes accounting for 255.42MB, 84.28% of 303.06MB total
+Dropped 387 nodes (cum <= 1.52MB)
+Showing top 100 nodes out of 431
+      flat  flat%   sum%        cum   cum%
+   47.01MB 15.51% 15.51%    47.01MB 15.51%  sigs.k8s.io/kustomize/kyaml/yaml.CopyYNode
+   15.09MB  4.98% 20.49%    15.59MB  5.14%  io.ReadAll
+   12.51MB  4.13% 24.62%    12.51MB  4.13%  go.yaml.in/yaml/v3.read
+   10.50MB  3.47% 28.08%    19.03MB  6.28%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).objectInterface
+   10.11MB  3.34% 31.42%    10.11MB  3.34%  bytes.growSlice
+   10.09MB  3.33% 34.75%    11.61MB  3.83%  go.yaml.in/yaml/v3.yaml_emitter_emit
+    6.50MB  2.14% 36.89%     6.50MB  2.14%  k8s.io/apimachinery/pkg/api/meta.IsNoMatchError
+    6.01MB  1.98% 38.87%     6.01MB  1.98%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.nbrSlice.mergeOne
+    5.51MB  1.82% 40.69%     5.51MB  1.82%  go.yaml.in/yaml/v2.yaml_parser_initialize (inline)
+    5.50MB  1.82% 42.51%     5.50MB  1.82%  k8s.io/apimachinery/pkg/runtime.DeepCopyJSONValue
+    5.50MB  1.81% 44.32%     5.50MB  1.81%  reflect.unsafe_New
+    5.20MB  1.72% 46.04%     7.52MB  2.48%  sigs.k8s.io/json/internal/golang/encoding/json.unquote (inline)
+    5.08MB  1.68% 47.71%    14.08MB  4.65%  k8s.io/apimachinery/pkg/api/meta.PriorityRESTMapper.RESTMapping
+       5MB  1.65% 49.36%     5.50MB  1.82%  go.yaml.in/yaml/v3.(*parser).node
+    4.51MB  1.49% 50.85%     4.51MB  1.49%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+    4.28MB  1.41% 52.26%    15.45MB  5.10%  encoding/json.Marshal
+    4.01MB  1.32% 53.59%     4.01MB  1.32%  sigs.k8s.io/kustomize/api/types.FsSlice.MergeOne
+    4.01MB  1.32% 54.91%     4.51MB  1.49%  k8s.io/client-go/transport.(*bearerAuthRoundTripper).RoundTrip
+       4MB  1.32% 56.23%        4MB  1.32%  golang.org/x/net/http2.(*Framer).readMetaFrame.func1
+       4MB  1.32% 57.55%        4MB  1.32%  sigs.k8s.io/kustomize/kyaml/yaml.NewRNode (inline)
+    3.50MB  1.16% 58.70%     3.50MB  1.16%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.fieldFilter (inline)
+    3.50MB  1.15% 59.86%     3.50MB  1.15%  path.Join
+       3MB  0.99% 60.85%     8.51MB  2.81%  go.yaml.in/yaml/v2.newParser (inline)
+       3MB  0.99% 61.84%        3MB  0.99%  regexp/syntax.(*compiler).inst (inline)
+       3MB  0.99% 62.83%        3MB  0.99%  reflect.mapassign_faststr0
+    2.84MB  0.94% 63.77%     2.84MB  0.94%  encoding/json.appendString[go.shape.string]
+    2.68MB  0.88% 64.65%     2.68MB  0.88%  bytes.NewBufferString (inline)
+    2.54MB  0.84% 65.49%     2.54MB  0.84%  go.yaml.in/yaml/v2.yaml_emitter_emit
+    2.51MB  0.83% 66.32%     2.51MB  0.83%  sigs.k8s.io/kustomize/api/types.FsSlice.DeepCopy (inline)
+    2.50MB  0.83% 67.15%     2.50MB  0.83%  go.yaml.in/yaml/v2.yaml_insert_token
+    2.50MB  0.83% 67.97%     2.50MB  0.83%  go.yaml.in/yaml/v3.yaml_parser_initialize (inline)
+    2.50MB  0.83% 68.80%     2.50MB  0.83%  go.yaml.in/yaml/v2.(*parser).node (inline)
+    2.50MB  0.82% 69.62%     2.50MB  0.82%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).RESTMappings
+    2.50MB  0.82% 70.45%     2.50MB  0.82%  strconv.syntaxError (inline)
+    2.32MB  0.77% 71.21%     2.32MB  0.77%  sigs.k8s.io/json/internal/golang/encoding/json.unquoteBytes
+    2.17MB  0.72% 71.93%     2.17MB  0.72%  os.readFileContents
+    2.01MB  0.66% 72.59%     2.01MB  0.66%  golang.org/x/net/http2.init.func3
+    2.01MB  0.66% 73.25%     2.01MB  0.66%  go.yaml.in/yaml/v3.yaml_emitter_initialize (inline)
+       2MB  0.66% 73.91%        2MB  0.66%  k8s.io/apimachinery/pkg/runtime.(*RawExtension).Unmarshal
+       2MB  0.66% 74.57%     7.85MB  2.59%  encoding/json.mapEncoder.encode
+       2MB  0.66% 75.23%        5MB  1.65%  k8s.io/client-go/rest.(*Request).URL
+       2MB  0.66% 75.89%        2MB  0.66%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Fields.func1
+    1.61MB  0.53% 76.42%     6.61MB  2.18%  go.yaml.in/yaml/v3.(*parser).scalar
+    1.59MB  0.52% 76.95%     1.59MB  0.52%  bytes.(*Buffer).String (inline)
+    1.52MB   0.5% 77.45%     1.52MB   0.5%  golang.org/x/net/http2.init.func5
+    1.50MB  0.49% 77.95%        7MB  2.31%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.getFilter
+    1.50MB  0.49% 78.44%    48.51MB 16.01%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Copy (inline)
+    1.50MB  0.49% 78.94%    21.12MB  6.97%  go.yaml.in/yaml/v3.(*parser).parseChild (inline)
+    1.16MB  0.38% 79.32%     1.75MB  0.58%  golang.org/x/net/http2.(*clientStream).writeRequestBody
+    1.02MB  0.34% 79.66%     1.52MB   0.5%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypeWithName
+       1MB  0.33% 79.99%     3.50MB  1.16%  go.yaml.in/yaml/v3.newParserFromReader (inline)
+       1MB  0.33% 80.32%     5.51MB  1.82%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+       1MB  0.33% 80.65%    22.03MB  7.27%  sigs.k8s.io/json/internal/golang/encoding/json.Unmarshal
+       1MB  0.33% 80.98%    26.02MB  8.59%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Pipe
+       1MB  0.33% 81.31%     2.50MB  0.83%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta.func1
+       1MB  0.33% 81.64%     7.52MB  2.48%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).literalInterface
+    0.50MB  0.17% 81.80%    77.17MB 25.46%  sigs.k8s.io/kustomize/kyaml/kio.(*ByteReader).Read
+    0.50MB  0.17% 81.97%        7MB  2.31%  github.com/opendatahub-io/odh-platform-utilities/pkg/render/kustomize.toUnstructuredSlice
+    0.50MB  0.17% 82.13%        3MB  0.99%  sigs.k8s.io/kustomize/api/types.(*Kustomization).Unmarshal
+    0.50MB  0.17% 82.30%     4.50MB  1.49%  regexp.compile
+    0.50MB  0.17% 82.46%    11.51MB  3.80%  sigs.k8s.io/kustomize/kyaml/yaml.FieldSetter.Filter
+    0.50MB  0.17% 82.63%        5MB  1.65%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).setMapInMetadata
+    0.50MB  0.16% 82.79%     6.50MB  2.15%  sigs.k8s.io/kustomize/api/internal/builtins.(*NamespaceTransformerPlugin).Transform
+    0.50MB  0.16% 82.96%     5.01MB  1.65%  golang.org/x/net/http2.(*Framer).readMetaFrame
+    0.50MB  0.16% 83.12%     7.50MB  2.48%  sigs.k8s.io/kustomize/api/filters/labels.Filter.Filter.func1
+    0.50MB  0.16% 83.29%    21.53MB  7.10%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.Decode
+    0.50MB  0.16% 83.45%        3MB  0.99%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta
+    0.50MB  0.16% 83.62%        3MB  0.99%  go.yaml.in/yaml/v2.(*parser).scalar
+    0.50MB  0.16% 83.78%     3.50MB  1.16%  go.yaml.in/yaml/v2.yaml_parser_parse_document_start
+    0.50MB  0.16% 83.95%     4.50MB  1.49%  k8s.io/apimachinery/pkg/runtime.toUnstructured
+    0.50MB  0.16% 84.11%     3.50MB  1.15%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Field.func1
+    0.50MB  0.16% 84.28%    21.03MB  6.94%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.decodeToUnstructured
+         0     0% 84.28%    10.11MB  3.34%  bytes.(*Buffer).Write
+         0     0% 84.28%     2.77MB  0.91%  bytes.(*Buffer).WriteTo
+         0     0% 84.28%    10.11MB  3.34%  bytes.(*Buffer).grow
+         0     0% 84.28%     9.66MB  3.19%  encoding/json.(*Encoder).Encode
+         0     0% 84.28%        2MB  0.66%  encoding/json.(*decodeState).array
+         0     0% 84.28%        3MB  0.99%  encoding/json.(*decodeState).object
+         0     0% 84.28%        3MB  0.99%  encoding/json.(*decodeState).unmarshal
+         0     0% 84.28%        3MB  0.99%  encoding/json.(*decodeState).value
+         0     0% 84.28%    12.17MB  4.02%  encoding/json.(*encodeState).marshal
+         0     0% 84.28%    12.17MB  4.02%  encoding/json.(*encodeState).reflectValue
+         0     0% 84.28%        3MB  0.99%  encoding/json.Unmarshal
+         0     0% 84.28%     2.50MB  0.83%  encoding/json.arrayEncoder.encode
+         0     0% 84.28%     6.34MB  2.09%  encoding/json.interfaceEncoder
+         0     0% 84.28%    10.66MB  3.52%  encoding/json.marshalerEncoder
+         0     0% 84.28%     2.50MB  0.83%  encoding/json.sliceEncoder.encode
+         0     0% 84.28%     3.34MB  1.10%  encoding/json.stringEncoder
+         0     0% 84.28%   248.09MB 81.86%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).Reconcile
+         0     0% 84.28%        2MB  0.66%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteLegacyMaaSPortalResources
+         0     0% 84.28%        2MB  0.66%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteMaaSPortalResources
+         0     0% 84.28%     3.02MB     1%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteModuleResources
+         0     0% 84.28%    63.07MB 20.81%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deployModuleManifests
+         0     0% 84.28%     2.52MB  0.83%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).overlayStandaloneReadiness
+         0     0% 84.28%   248.09MB 81.86%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcile
+         0     0% 84.28%   248.09MB 81.86%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileDeployment
+         0     0% 84.28%        2MB  0.66%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortal
+         0     0% 84.28%        2MB  0.66%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortalOperand
+         0     0% 84.28%    68.61MB 22.64%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileModuleDemand
+         0     0% 84.28%        2MB  0.66%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileRemovedMaaSPortal

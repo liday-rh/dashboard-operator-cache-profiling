@@ -1,0 +1,51 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: inuse_objects
+Time: 2026-11-19 18:25:37 GMT
+Showing nodes accounting for 28845, 99.62% of 28955 total
+Dropped 20 nodes (cum <= 144)
+      flat  flat%   sum%        cum   cum%
+     10923 37.72% 37.72%      10923 37.72%  github.com/go-openapi/swag/jsonutils/adapters.(*Registrar).RegisterFor
+      8192 28.29% 66.02%       8192 28.29%  k8s.io/apimachinery/pkg/runtime/serializer.CodecFactory.WithoutConversion (inline)
+      4096 14.15% 80.16%       4096 14.15%  k8s.io/api/rbac/v1.(*PolicyRule).Unmarshal
+      1820  6.29% 86.45%       1820  6.29%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+      1489  5.14% 91.59%       1489  5.14%  reflect.unsafe_New
+      1489  5.14% 96.73%       2154  7.44%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+       665  2.30% 99.03%        665  2.30%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+       171  0.59% 99.62%        171  0.59%  k8s.io/client-go/discovery.convertAPIGroup
+         0     0% 99.62%      10923 37.72%  github.com/go-openapi/swag/jsonutils/adapters.NewRegistrar
+         0     0% 99.62%      10923 37.72%  github.com/go-openapi/swag/jsonutils/adapters.init
+         0     0% 99.62%      10923 37.72%  github.com/go-openapi/swag/jsonutils/adapters/stdlib/json.Register
+         0     0% 99.62%       2325  8.03%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.ManagerCacheOptions
+         0     0% 99.62%       2325  8.03%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.apiResourceAvailable
+         0     0% 99.62%       2325  8.03%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.optionalOwnedResources
+         0     0% 99.62%       4096 14.15%  k8s.io/api/rbac/v1.(*ClusterRole).Unmarshal
+         0     0% 99.62%       1820  6.29%  k8s.io/api/rbac/v1.(*RoleBinding).Unmarshal
+         0     0% 99.62%       1489  5.14%  k8s.io/apimachinery/pkg/runtime.(*Scheme).New
+         0     0% 99.62%       7405 25.57%  k8s.io/apimachinery/pkg/runtime.Decode (inline)
+         0     0% 99.62%       1489  5.14%  k8s.io/apimachinery/pkg/runtime.UseOrCreateObject
+         0     0% 99.62%       7405 25.57%  k8s.io/apimachinery/pkg/runtime.WithoutVersionDecoder.Decode
+         0     0% 99.62%       7405 25.57%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+         0     0% 99.62%       7405 25.57%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.unmarshalToObject
+         0     0% 99.62%       7405 25.57%  k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive
+         0     0% 99.62%        171  0.59%  k8s.io/client-go/discovery.(*DiscoveryClient).GroupsAndMaybeResources
+         0     0% 99.62%        171  0.59%  k8s.io/client-go/discovery.(*DiscoveryClient).downloadAPIs
+         0     0% 99.62%        171  0.59%  k8s.io/client-go/discovery.SplitGroupsAndResources
+         0     0% 99.62%       8192 28.29%  k8s.io/client-go/metadata.ConfigFor
+         0     0% 99.62%       8192 28.29%  k8s.io/client-go/metadata.NewForConfigAndClient
+         0     0% 99.62%       7405 25.57%  k8s.io/client-go/rest/watch.(*Decoder).Decode
+         0     0% 99.62%        665  2.30%  k8s.io/client-go/restmapper.NewDiscoveryRESTMapper
+         0     0% 99.62%      10517 36.32%  main.main
+         0     0% 99.62%       2325  8.03%  main.main.NewManagerCache.func5
+         0     0% 99.62%       1489  5.14%  reflect.New
+         0     0% 99.62%      10966 37.87%  runtime.doInit (inline)
+         0     0% 99.62%      10966 37.87%  runtime.doInit1
+         0     0% 99.62%      21483 74.19%  runtime.main
+         0     0% 99.62%       8192 28.29%  sigs.k8s.io/controller-runtime/pkg/client.New
+         0     0% 99.62%       8192 28.29%  sigs.k8s.io/controller-runtime/pkg/client.newClient
+         0     0% 99.62%       2325  8.03%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).RESTMapping
+         0     0% 99.62%       2325  8.03%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addKnownGroupAndReload
+         0     0% 99.62%       2325  8.03%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).findAPIGroupByNameAndMaybeAggregatedDiscoveryLocked
+         0     0% 99.62%       7405 25.57%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.targetZeroingDecoder.Decode
+         0     0% 99.62%      10517 36.32%  sigs.k8s.io/controller-runtime/pkg/cluster.New
+         0     0% 99.62%      10517 36.32%  sigs.k8s.io/controller-runtime/pkg/manager.New

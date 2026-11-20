@@ -1,0 +1,108 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: alloc_objects
+Time: 2026-11-19 18:25:37 GMT
+Showing nodes accounting for 2332168, 91.39% of 2551905 total
+Dropped 410 nodes (cum <= 12759)
+Showing top 100 nodes out of 408
+      flat  flat%   sum%        cum   cum%
+    312953 12.26% 12.26%     312953 12.26%  sigs.k8s.io/kustomize/kyaml/yaml.CopyYNode
+    248342  9.73% 22.00%     248342  9.73%  reflect.unsafe_New
+    120153  4.71% 26.70%     120153  4.71%  k8s.io/apimachinery/pkg/api/meta.IsNoMatchError
+     92985  3.64% 30.35%      92997  3.64%  sigs.k8s.io/json/internal/golang/encoding/json.unquote (inline)
+     69632  2.73% 33.08%      69632  2.73%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Fields.func1
+     65536  2.57% 35.64%      65536  2.57%  go.yaml.in/yaml/v3.resolve
+     65536  2.57% 38.21%      65536  2.57%  internal/bytealg.MakeNoZero
+     65536  2.57% 40.78%     322406 12.63%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.decodeToUnstructured
+     65536  2.57% 43.35%     109381  4.29%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).literalInterface
+     65536  2.57% 45.92%      65536  2.57%  sigs.k8s.io/kustomize/kyaml/yaml.NewRNode (inline)
+     60527  2.37% 48.29%     219060  8.58%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).objectInterface
+     59108  2.32% 50.60%      59108  2.32%  go.yaml.in/yaml/v3.read
+     54615  2.14% 52.74%      54615  2.14%  strconv.syntaxError (inline)
+     52703  2.07% 54.81%      52703  2.07%  path.Join
+     52429  2.05% 56.86%     130529  5.11%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.getFilter
+     42960  1.68% 58.55%      42960  1.68%  k8s.io/apimachinery/pkg/runtime.DeepCopyJSONValue
+     40961  1.61% 60.15%      40961  1.61%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).RESTMappings
+     40960  1.61% 61.76%     167437  6.56%  go.yaml.in/yaml/v3.(*parser).parseChild (inline)
+     38229  1.50% 63.26%      44783  1.75%  github.com/prometheus/client_golang/prometheus.processMetric
+     34588  1.36% 64.61%      34588  1.36%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.SetNestedStringMap
+     34408  1.35% 65.96%      34408  1.35%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.fieldFilter (inline)
+     32770  1.28% 67.24%      65538  2.57%  go.yaml.in/yaml/v3.(*parser).node
+     32768  1.28% 68.53%      43691  1.71%  encoding/json.(*decodeState).literalStore
+     32768  1.28% 69.81%      32768  1.28%  fmt.(*ss).floatToken
+     32768  1.28% 71.10%      56173  2.20%  go.yaml.in/yaml/v2.(*parser).scalar
+     32768  1.28% 72.38%      43437  1.70%  go.yaml.in/yaml/v2.yaml_parser_parse_document_start
+     32768  1.28% 73.66%      32768  1.28%  go.yaml.in/yaml/v3.(*decoder).scalar
+     32768  1.28% 74.95%     118692  4.65%  k8s.io/apimachinery/pkg/runtime.toUnstructured
+     32768  1.28% 76.23%      81920  3.21%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Field.func1
+     25719  1.01% 77.24%      25719  1.01%  regexp/syntax.(*compiler).inst (inline)
+     24576  0.96% 78.20%     337529 13.23%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Copy (inline)
+     23405  0.92% 79.12%      23405  0.92%  go.yaml.in/yaml/v2.(*parser).node (inline)
+     21846  0.86% 79.98%      21846  0.86%  reflect.makemap
+     21846  0.86% 80.83%      27306  1.07%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta.func1
+     19998  0.78% 81.62%     118856  4.66%  encoding/json.mapEncoder.encode
+     18321  0.72% 82.33%      18321  0.72%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.nbrSlice.mergeOne
+     17925   0.7% 83.04%      17925   0.7%  golang.org/x/net/http2.(*Framer).readMetaFrame.func1
+     16397  0.64% 83.68%      22951   0.9%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypeWithName
+     16385  0.64% 84.32%      16385  0.64%  github.com/prometheus/common/model.EscapeMetricFamily
+     16384  0.64% 84.96%      16384  0.64%  k8s.io/client-go/rest.newDNSMetricsTrace
+     16384  0.64% 85.61%      21426  0.84%  path/filepath.walkSymlinks
+     16384  0.64% 86.25%     282541 11.07%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Pipe
+     16384  0.64% 86.89%      16384  0.64%  sigs.k8s.io/kustomize/kyaml/yaml.mergeAll.func1
+     14564  0.57% 87.46%      56344  2.21%  k8s.io/client-go/rest.(*Request).URL
+     13518  0.53% 87.99%      13518  0.53%  reflect.growslice
+     13458  0.53% 88.52%      13458  0.53%  strings.genSplit
+     10923  0.43% 88.95%     333329 13.06%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.Decode
+     10923  0.43% 89.37%      38229  1.50%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta
+      8192  0.32% 89.69%      26165  1.03%  golang.org/x/net/http2.(*Framer).readMetaFrame
+      8192  0.32% 90.02%     105809  4.15%  sigs.k8s.io/kustomize/api/filters/labels.Filter.Filter.func1
+      5461  0.21% 90.23%      44042  1.73%  sigs.k8s.io/kustomize/api/internal/builtins.(*NamespaceTransformerPlugin).Transform
+      5042   0.2% 90.43%     338010 13.25%  sigs.k8s.io/json/internal/golang/encoding/json.Unmarshal
+      4681  0.18% 90.61%      29229  1.15%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).setMapInMetadata
+      4681  0.18% 90.79%      21065  0.83%  sigs.k8s.io/kustomize/kyaml/yaml.FieldMatcher.Filter
+      3277  0.13% 90.92%      34189  1.34%  regexp.compile
+      3277  0.13% 91.05%      91814  3.60%  sigs.k8s.io/kustomize/kyaml/yaml.FieldSetter.Filter
+      2185 0.086% 91.14%      34953  1.37%  reflect.Value.MapKeys
+      1831 0.072% 91.21%      64092  2.51%  go.yaml.in/yaml/v3.(*parser).scalar
+      1365 0.053% 91.26%      23211  0.91%  k8s.io/client-go/rest.NewRequest
+       890 0.035% 91.30%     120478  4.72%  encoding/json.Marshal
+       745 0.029% 91.33%      31495  1.23%  sigs.k8s.io/kustomize/api/types.(*Kustomization).Unmarshal
+       683 0.027% 91.35%     166706  6.53%  github.com/opendatahub-io/odh-platform-utilities/pkg/render/kustomize.toUnstructuredSlice
+       455 0.018% 91.37%      33223  1.30%  sigs.k8s.io/kustomize/api/resource.(*Factory).DropLocalNodes
+       322 0.013% 91.38%     161436  6.33%  k8s.io/apimachinery/pkg/api/meta.PriorityRESTMapper.RESTMapping
+        85 0.0033% 91.39%      33194  1.30%  github.com/prometheus/procfs.parseStat
+        85 0.0033% 91.39%     512842 20.10%  sigs.k8s.io/kustomize/kyaml/kio.(*ByteReader).Read
+         0     0% 91.39%      32768  1.28%  encoding/json.(*Decoder).Decode
+         0     0% 91.39%     116144  4.55%  encoding/json.(*Encoder).Encode
+         0     0% 91.39%      24441  0.96%  encoding/json.(*decodeState).array
+         0     0% 91.39%      68132  2.67%  encoding/json.(*decodeState).object
+         0     0% 91.39%      68132  2.67%  encoding/json.(*decodeState).unmarshal
+         0     0% 91.39%      68132  2.67%  encoding/json.(*decodeState).value
+         0     0% 91.39%     119961  4.70%  encoding/json.(*encodeState).marshal
+         0     0% 91.39%     119961  4.70%  encoding/json.(*encodeState).reflectValue
+         0     0% 91.39%      39460  1.55%  encoding/json.Unmarshal
+         0     0% 91.39%     101709  3.99%  encoding/json.arrayEncoder.encode
+         0     0% 91.39%      21846  0.86%  encoding/json.indirect
+         0     0% 91.39%     115206  4.51%  encoding/json.interfaceEncoder
+         0     0% 91.39%     116517  4.57%  encoding/json.marshalerEncoder
+         0     0% 91.39%     101709  3.99%  encoding/json.sliceEncoder.encode
+         0     0% 91.39%      32768  1.28%  fmt.(*ss).doScanf
+         0     0% 91.39%      32768  1.28%  fmt.(*ss).scanOne
+         0     0% 91.39%      32768  1.28%  fmt.Fscanf
+         0     0% 91.39%      32768  1.28%  fmt.Sscanf (inline)
+         0     0% 91.39%    2121997 83.15%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).Reconcile
+         0     0% 91.39%      22451  0.88%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteLegacyMaaSPortalResources
+         0     0% 91.39%      22451  0.88%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteMaaSPortalResources
+         0     0% 91.39%      27404  1.07%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteModuleResources
+         0     0% 91.39%     648056 25.39%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deployModuleManifests
+         0     0% 91.39%      19590  0.77%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).overlayStandaloneReadiness
+         0     0% 91.39%    2121997 83.15%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcile
+         0     0% 91.39%    2121997 83.15%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileDeployment
+         0     0% 91.39%      22451  0.88%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortal
+         0     0% 91.39%      22451  0.88%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortalOperand
+         0     0% 91.39%     695050 27.24%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileModuleDemand
+         0     0% 91.39%      22451  0.88%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileRemovedMaaSPortal
+         0     0% 91.39%      27810  1.09%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.ManagerCacheOptions
+         0     0% 91.39%      27682  1.08%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.apiResourceAvailable
+         0     0% 91.39%      27682  1.08%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.optionalOwnedResources
+         0     0% 91.39%     600804 23.54%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).Deploy

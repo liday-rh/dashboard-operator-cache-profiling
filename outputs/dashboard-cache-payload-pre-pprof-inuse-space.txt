@@ -1,0 +1,101 @@
+File: manager
+Build ID: 340dd7dbbf22457d76b358ccd32d1828fec30035
+Type: inuse_space
+Time: 2026-11-19 18:12:13 GMT
+Showing nodes accounting for 192.63MB, 94.07% of 204.78MB total
+Dropped 107 nodes (cum <= 1.02MB)
+      flat  flat%   sum%        cum   cum%
+  171.17MB 83.59% 83.59%   172.17MB 84.08%  k8s.io/api/core/v1.(*ConfigMap).Unmarshal
+    6.11MB  2.98% 86.57%     8.11MB  3.96%  k8s.io/api/core/v1.(*Secret).Unmarshal
+    5.50MB  2.69% 89.26%     6.50MB  3.18%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+    2.51MB  1.22% 90.48%     2.51MB  1.22%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+    1.50MB  0.73% 91.22%     1.50MB  0.73%  runtime.mallocgc
+    1.33MB  0.65% 91.86%     1.33MB  0.65%  k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode
+    1.18MB  0.58% 92.44%     1.18MB  0.58%  bytes.growSlice
+    1.16MB  0.57% 93.01%     1.16MB  0.57%  golang.org/x/net/http2.(*Framer).startWriteDataPadded
+    0.58MB  0.28% 93.29%     1.75MB  0.85%  golang.org/x/net/http2.(*clientStream).writeRequestBody
+    0.58MB  0.28% 93.58%     1.24MB  0.61%  encoding/json.Marshal
+    0.50MB  0.24% 93.82%     1.50MB  0.73%  k8s.io/api/rbac/v1.(*RoleBinding).Unmarshal
+    0.50MB  0.24% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*cache).Replace
+         0     0% 94.07%     1.18MB  0.58%  bytes.(*Buffer).Grow (inline)
+         0     0% 94.07%     1.18MB  0.58%  bytes.(*Buffer).grow
+         0     0% 94.07%     3.87MB  1.89%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).Reconcile
+         0     0% 94.07%     2.63MB  1.28%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteLegacyMaaSPortalResourceList
+         0     0% 94.07%     2.63MB  1.28%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteLegacyMaaSPortalResources
+         0     0% 94.07%     2.63MB  1.28%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).deleteMaaSPortalResources
+         0     0% 94.07%     3.87MB  1.89%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcile
+         0     0% 94.07%     3.87MB  1.89%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileDeployment
+         0     0% 94.07%     2.63MB  1.28%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortal
+         0     0% 94.07%     2.63MB  1.28%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileMaaSPortalOperand
+         0     0% 94.07%     2.63MB  1.28%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.(*DashboardReconciler).reconcileRemovedMaaSPortal
+         0     0% 94.07%     2.51MB  1.22%  github.com/opendatahub-io/odh-platform-utilities/pkg/cluster.DetectPlatform
+         0     0% 94.07%     2.51MB  1.22%  github.com/opendatahub-io/odh-platform-utilities/pkg/cluster.detectManagedRhoai
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).Deploy
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).apply
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).applyResource
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).applyWithMode
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).deployOne
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).deployResource
+         0     0% 94.07%     1.24MB  0.61%  github.com/opendatahub-io/odh-platform-utilities/pkg/resources.Apply
+         0     0% 94.07%     1.53MB  0.75%  golang.org/x/net/http2.(*ClientConn).readLoop
+         0     0% 94.07%     1.53MB  0.75%  golang.org/x/net/http2.(*Framer).ReadFrame
+         0     0% 94.07%     1.16MB  0.57%  golang.org/x/net/http2.(*Framer).WriteData (inline)
+         0     0% 94.07%     1.16MB  0.57%  golang.org/x/net/http2.(*Framer).WriteDataPadded
+         0     0% 94.07%     1.53MB  0.75%  golang.org/x/net/http2.(*clientConnReadLoop).run
+         0     0% 94.07%     1.75MB  0.85%  golang.org/x/net/http2.(*clientStream).doRequest
+         0     0% 94.07%     1.75MB  0.85%  golang.org/x/net/http2.(*clientStream).writeRequest
+         0     0% 94.07%        2MB  0.98%  k8s.io/api/apps/v1.(*Deployment).Unmarshal
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/api/apps/v1.(*DeploymentSpec).Unmarshal
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/api/core/v1.(*Container).Unmarshal
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/api/core/v1.(*PodSpec).Unmarshal
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/api/core/v1.(*PodTemplateSpec).Unmarshal
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/api/rbac/v1.(*ClusterRole).Unmarshal
+         0     0% 94.07%   188.28MB 91.94%  k8s.io/apimachinery/pkg/runtime.Decode (inline)
+         0     0% 94.07%   188.28MB 91.94%  k8s.io/apimachinery/pkg/runtime.WithoutVersionDecoder.Decode
+         0     0% 94.07%   188.28MB 91.94%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+         0     0% 94.07%   188.28MB 91.94%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.unmarshalToObject
+         0     0% 94.07%     1.24MB  0.61%  k8s.io/apimachinery/pkg/util/json.Marshal
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/apimachinery/pkg/util/wait.BackoffUntilWithContext
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/apimachinery/pkg/util/wait.BackoffUntilWithContext.func1
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/apimachinery/pkg/util/wait.JitterUntilWithContext
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/apimachinery/pkg/util/wait.UntilWithContext (inline)
+         0     0% 94.07%   189.61MB 92.59%  k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive
+         0     0% 94.07%   189.61MB 92.59%  k8s.io/client-go/rest/watch.(*Decoder).Decode
+         0     0% 94.07%     2.51MB  1.22%  k8s.io/client-go/restmapper.NewDiscoveryRESTMapper
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*RealFIFO).PopBatch
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*RealFIFO).PopBatch.func3
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*RealFIFO).whileProcessing_locked
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*controller).RunWithContext
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*controller).processLoop
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*sharedIndexInformer).RunWithContext
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*sharedIndexInformer).RunWithContext.func1.1
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.(*sharedIndexInformer).handleDeltas
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.processDeltas
+         0     0% 94.07%     1.50MB  0.73%  k8s.io/client-go/tools/cache.processReplacedAllInfo
+         0     0% 94.07%     1.24MB  0.61%  k8s.io/client-go/util/apply.NewRequest
+         0     0% 94.07%     2.51MB  1.22%  main.main
+         0     0% 94.07%     1.51MB  0.74%  runtime.doInit (inline)
+         0     0% 94.07%     1.51MB  0.74%  runtime.doInit1
+         0     0% 94.07%     4.01MB  1.96%  runtime.main
+         0     0% 94.07%     1.50MB  0.73%  runtime.newobject
+         0     0% 94.07%     2.63MB  1.28%  sigs.k8s.io/controller-runtime/pkg/cache.(*informerCache).List
+         0     0% 94.07%     1.50MB  0.73%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*Cache).Start
+         0     0% 94.07%     2.63MB  1.28%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*CacheReader).List
+         0     0% 94.07%     1.50MB  0.73%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*Informers).startInformerLocked.func1
+         0     0% 94.07%     1.24MB  0.61%  sigs.k8s.io/controller-runtime/pkg/client.(*client).Apply
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client.(*client).Get
+         0     0% 94.07%     2.63MB  1.28%  sigs.k8s.io/controller-runtime/pkg/client.(*client).List
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client.(*clientRestResources).getResource
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client.(*clientRestResources).newResource
+         0     0% 94.07%     1.24MB  0.61%  sigs.k8s.io/controller-runtime/pkg/client.(*unstructuredClient).Apply
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client.(*unstructuredClient).Get
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).RESTMapping
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addKnownGroupAndReload
+         0     0% 94.07%     2.51MB  1.22%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).findAPIGroupByNameAndMaybeAggregatedDiscoveryLocked
+         0     0% 94.07%   188.28MB 91.94%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.targetZeroingDecoder.Decode
+         0     0% 94.07%     3.87MB  1.89%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).Reconcile
+         0     0% 94.07%     3.87MB  1.89%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).Start.func1.1
+         0     0% 94.07%     3.87MB  1.89%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).processNextWorkItem
+         0     0% 94.07%     3.87MB  1.89%  sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller[go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).reconcileHandler
+         0     0% 94.07%     1.50MB  0.73%  sync.(*WaitGroup).Go.func1

@@ -1,0 +1,68 @@
+File: manager
+Build ID: ea3a5b4d485ecddf24dee82448602febb5f448fa
+Type: inuse_objects
+Time: 2026-11-19 18:38:00 GMT
+Showing nodes accounting for 68629, 98.97% of 69343 total
+Dropped 56 nodes (cum <= 346)
+      flat  flat%   sum%        cum   cum%
+     32768 47.25% 47.25%      32768 47.25%  encoding/json.(*decodeState).literalStore
+     16384 23.63% 70.88%      16384 23.63%  regexp.mergeRuneSets.func2 (inline)
+     15838 22.84% 93.72%      15838 22.84%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+      1820  2.62% 96.35%       1820  2.62%  k8s.io/api/flowcontrol/v1.init
+       736  1.06% 97.41%        736  1.06%  k8s.io/apimachinery/pkg/api/meta.(*DefaultRESTMapper).AddSpecific (inline)
+       711  1.03% 98.43%        711  1.03%  runtime.mallocgc
+       372  0.54% 98.97%        372  0.54%  runtime/metrics.runtime_readMetrics
+         0     0% 98.97%      32768 47.25%  encoding/json.(*decodeState).array
+         0     0% 98.97%      32768 47.25%  encoding/json.(*decodeState).object
+         0     0% 98.97%      32768 47.25%  encoding/json.(*decodeState).unmarshal
+         0     0% 98.97%      32768 47.25%  encoding/json.(*decodeState).value
+         0     0% 98.97%      32768 47.25%  encoding/json.Unmarshal
+         0     0% 98.97%      33504 48.32%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.ManagerCacheOptions
+         0     0% 98.97%      33504 48.32%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.apiResourceAvailable
+         0     0% 98.97%      33504 48.32%  github.com/opendatahub-io/odh-dashboard/dashboard-operator/internal/controller.optionalOwnedResources
+         0     0% 98.97%        372  0.54%  github.com/prometheus/client_golang/prometheus.(*Registry).Gather.func1
+         0     0% 98.97%        372  0.54%  github.com/prometheus/client_golang/prometheus.(*goCollector).Collect
+         0     0% 98.97%      14018 20.22%  k8s.io/api/core/v1.(*Namespace).Unmarshal
+         0     0% 98.97%       1820  2.62%  k8s.io/api/networking/v1.(*NetworkPolicy).Unmarshal
+         0     0% 98.97%      15838 22.84%  k8s.io/apimachinery/pkg/runtime.Decode (inline)
+         0     0% 98.97%      15838 22.84%  k8s.io/apimachinery/pkg/runtime.WithoutVersionDecoder.Decode
+         0     0% 98.97%      15838 22.84%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+         0     0% 98.97%      15838 22.84%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.unmarshalToObject
+         0     0% 98.97%      15936 22.98%  k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive
+         0     0% 98.97%      32768 47.25%  k8s.io/client-go/discovery.(*DiscoveryClient).GroupsAndMaybeResources
+         0     0% 98.97%      32768 47.25%  k8s.io/client-go/discovery.(*DiscoveryClient).downloadAPIs
+         0     0% 98.97%      15936 22.98%  k8s.io/client-go/rest/watch.(*Decoder).Decode
+         0     0% 98.97%        736  1.06%  k8s.io/client-go/restmapper.NewDiscoveryRESTMapper
+         0     0% 98.97%      33504 48.32%  main.main
+         0     0% 98.97%      33504 48.32%  main.main.NewManagerCache.func5
+         0     0% 98.97%      16384 23.63%  oras.land/oras-go/v2/registry.init
+         0     0% 98.97%      16384 23.63%  regexp.Compile (inline)
+         0     0% 98.97%      16384 23.63%  regexp.MustCompile
+         0     0% 98.97%      16384 23.63%  regexp.compile
+         0     0% 98.97%      16384 23.63%  regexp.compileOnePass
+         0     0% 98.97%      16384 23.63%  regexp.makeOnePass
+         0     0% 98.97%      16384 23.63%  regexp.makeOnePass.func1
+         0     0% 98.97%      16384 23.63%  regexp.mergeRuneSets
+         0     0% 98.97%        711  1.03%  runtime.allocm
+         0     0% 98.97%      18649 26.89%  runtime.doInit (inline)
+         0     0% 98.97%      18649 26.89%  runtime.doInit1
+         0     0% 98.97%        455  0.66%  runtime.mProfStackInit (inline)
+         0     0% 98.97%      52153 75.21%  runtime.main
+         0     0% 98.97%        455  0.66%  runtime.makeProfStackFP (inline)
+         0     0% 98.97%        455  0.66%  runtime.makeslice
+         0     0% 98.97%        711  1.03%  runtime.mcall
+         0     0% 98.97%        455  0.66%  runtime.mcommoninit
+         0     0% 98.97%        711  1.03%  runtime.newm
+         0     0% 98.97%        711  1.03%  runtime.park_m
+         0     0% 98.97%        711  1.03%  runtime.resetspinning
+         0     0% 98.97%        711  1.03%  runtime.schedule
+         0     0% 98.97%        711  1.03%  runtime.startm
+         0     0% 98.97%        711  1.03%  runtime.wakep
+         0     0% 98.97%        372  0.54%  runtime/metrics.Read (inline)
+         0     0% 98.97%      33504 48.32%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).RESTMapping
+         0     0% 98.97%        736  1.06%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addGroupVersionResourcesToCacheAndReloadLocked
+         0     0% 98.97%      33504 48.32%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).addKnownGroupAndReload
+         0     0% 98.97%      33504 48.32%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.(*mapper).findAPIGroupByNameAndMaybeAggregatedDiscoveryLocked
+         0     0% 98.97%      15838 22.84%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.targetZeroingDecoder.Decode
+         0     0% 98.97%      33504 48.32%  sigs.k8s.io/controller-runtime/pkg/cluster.New
+         0     0% 98.97%      33504 48.32%  sigs.k8s.io/controller-runtime/pkg/manager.New

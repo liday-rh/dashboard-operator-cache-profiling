@@ -1,0 +1,108 @@
+File: manager
+Build ID: 340dd7dbbf22457d76b358ccd32d1828fec30035
+Type: alloc_space
+Time: 2026-11-19 18:12:13 GMT
+Showing nodes accounting for 3413.65MB, 84.01% of 4063.17MB total
+Dropped 943 nodes (cum <= 20.32MB)
+Showing top 100 nodes out of 362
+      flat  flat%   sum%        cum   cum%
+  625.59MB 15.40% 15.40%   625.59MB 15.40%  sigs.k8s.io/kustomize/kyaml/yaml.CopyYNode
+  195.82MB  4.82% 20.22%   195.82MB  4.82%  k8s.io/apimachinery/pkg/runtime.(*Unknown).Unmarshal
+  193.55MB  4.76% 24.98%   193.55MB  4.76%  k8s.io/apimachinery/pkg/runtime.(*RawExtension).Unmarshal
+  191.32MB  4.71% 29.69%   192.84MB  4.75%  io.ReadAll
+  171.17MB  4.21% 33.90%   172.17MB  4.24%  k8s.io/api/core/v1.(*ConfigMap).Unmarshal
+  117.60MB  2.89% 36.80%   124.15MB  3.06%  go.yaml.in/yaml/v3.yaml_emitter_emit
+  117.30MB  2.89% 39.68%   117.30MB  2.89%  go.yaml.in/yaml/v3.read
+  117.03MB  2.88% 42.56%   281.87MB  6.94%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).objectInterface
+   88.58MB  2.18% 44.74%    88.58MB  2.18%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.nbrSlice.mergeOne
+   86.72MB  2.13% 46.88%   149.84MB  3.69%  sigs.k8s.io/json/internal/golang/encoding/json.unquote (inline)
+   81.03MB  1.99% 48.87%    81.03MB  1.99%  bytes.growSlice
+   79.51MB  1.96% 50.83%    88.51MB  2.18%  go.yaml.in/yaml/v3.(*parser).node
+   76.02MB  1.87% 52.70%    76.02MB  1.87%  k8s.io/apimachinery/pkg/runtime.DeepCopyJSONValue
+   69.09MB  1.70% 54.40%    69.09MB  1.70%  go.yaml.in/yaml/v2.yaml_parser_initialize (inline)
+   63.12MB  1.55% 55.95%    63.12MB  1.55%  sigs.k8s.io/json/internal/golang/encoding/json.unquoteBytes
+   59.50MB  1.46% 57.42%    59.50MB  1.46%  sigs.k8s.io/kustomize/kyaml/yaml.NewRNode (inline)
+   48.24MB  1.19% 58.60%   122.53MB  3.02%  encoding/json.Marshal
+   48.02MB  1.18% 59.79%    48.02MB  1.18%  reflect.mapassign_faststr0
+   42.01MB  1.03% 60.82%    75.54MB  1.86%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).DeepCopyInto
+   41.50MB  1.02% 61.84%    41.50MB  1.02%  reflect.unsafe_New
+   40.31MB  0.99% 62.83%    40.31MB  0.99%  bytes.(*Buffer).String (inline)
+   38.82MB  0.96% 63.79%    38.82MB  0.96%  go.yaml.in/yaml/v2.yaml_insert_token
+   38.07MB  0.94% 64.73%    38.07MB  0.94%  os.readFileContents
+   37.07MB  0.91% 65.64%    37.07MB  0.91%  bytes.NewBufferString (inline)
+   35.64MB  0.88% 66.52%    35.64MB  0.88%  sigs.k8s.io/kustomize/api/types.FsSlice.DeepCopy (inline)
+   35.50MB  0.87% 67.39%    35.50MB  0.87%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.fieldFilter (inline)
+   34.63MB  0.85% 68.24%    34.63MB  0.85%  golang.org/x/net/http2.init.func3
+   34.08MB  0.84% 69.08%    34.08MB  0.84%  sigs.k8s.io/kustomize/api/types.FsSlice.MergeOne
+   33.68MB  0.83% 69.91%    33.68MB  0.83%  reflect.unsafe_NewArray
+   31.75MB  0.78% 70.69%    32.75MB  0.81%  go.yaml.in/yaml/v2.yaml_emitter_emit
+   31.66MB  0.78% 71.47%   101.17MB  2.49%  go.yaml.in/yaml/v3.(*parser).scalar
+      31MB  0.76% 72.23%    33.50MB  0.82%  path.Join
+   29.53MB  0.73% 72.96%    29.53MB  0.73%  k8s.io/apimachinery/pkg/apis/meta/v1.(*FieldsV1).DeepCopyInto (inline)
+   28.55MB   0.7% 73.66%    54.55MB  1.34%  k8s.io/client-go/transport.(*bearerAuthRoundTripper).RoundTrip
+   26.50MB  0.65% 74.31%    26.50MB  0.65%  go.yaml.in/yaml/v2.(*parser).node (inline)
+   24.52MB   0.6% 74.92%    93.60MB  2.30%  go.yaml.in/yaml/v2.newParser (inline)
+   23.59MB  0.58% 75.50%    23.59MB  0.58%  go.yaml.in/yaml/v3.yaml_emitter_initialize (inline)
+   22.51MB  0.55% 76.05%    22.51MB  0.55%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta.func1.1
+   21.52MB  0.53% 76.58%    21.52MB  0.53%  go.yaml.in/yaml/v3.yaml_insert_token
+   21.32MB  0.52% 77.11%    62.83MB  1.55%  k8s.io/api/rbac/v1.(*ClusterRole).DeepCopyInto
+   21.02MB  0.52% 77.62%    21.02MB  0.52%  regexp/syntax.(*compiler).inst (inline)
+   16.50MB  0.41% 78.03%   153.61MB  3.78%  sigs.k8s.io/kustomize/kyaml/yaml.FieldSetter.Filter
+   14.68MB  0.36% 78.39%   233.86MB  5.76%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*CacheReader).List
+   14.50MB  0.36% 78.75%    33.51MB  0.82%  k8s.io/api/rbac/v1.(*RoleBinding).DeepCopy (inline)
+   14.50MB  0.36% 79.11%    35.45MB  0.87%  encoding/json.mapEncoder.encode
+      14MB  0.34% 79.45%    36.51MB   0.9%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta.func1
+   13.50MB  0.33% 79.78%       45MB  1.11%  k8s.io/client-go/rest.(*Request).URL
+   11.50MB  0.28% 80.07%    74.33MB  1.83%  k8s.io/api/rbac/v1.(*ClusterRole).DeepCopy (inline)
+      10MB  0.25% 80.31%   254.65MB  6.27%  go.yaml.in/yaml/v3.(*parser).parseChild (inline)
+      10MB  0.25% 80.56%   139.84MB  3.44%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).literalInterface
+    9.51MB  0.23% 80.79%    24.03MB  0.59%  go.yaml.in/yaml/v3.newParserFromReader (inline)
+    9.50MB  0.23% 81.03%    63.01MB  1.55%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.getFilter
+       8MB   0.2% 81.22%    20.51MB   0.5%  k8s.io/apimachinery/pkg/util/net.CloneRequest (inline)
+       8MB   0.2% 81.42%    50.50MB  1.24%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Field.func1
+       7MB  0.17% 81.59%   301.37MB  7.42%  sigs.k8s.io/json/internal/golang/encoding/json.Unmarshal
+    6.50MB  0.16% 81.75%   316.70MB  7.79%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Pipe
+    6.50MB  0.16% 81.91%    43.01MB  1.06%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).getMapFromMeta
+    4.50MB  0.11% 82.02%       24MB  0.59%  sigs.k8s.io/kustomize/kyaml/yaml.addMetadataNode
+    4.50MB  0.11% 82.13%    42.51MB  1.05%  k8s.io/apimachinery/pkg/runtime.toUnstructured
+       4MB 0.098% 82.23%    23.53MB  0.58%  encoding/json.Unmarshal
+       4MB 0.098% 82.33%   125.03MB  3.08%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).arrayInterface
+       4MB 0.098% 82.43%    56.54MB  1.39%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).setMapInMetadata
+    3.50MB 0.086% 82.51%    27.09MB  0.67%  go.yaml.in/yaml/v3.newEncoderWithWriter (inline)
+    3.50MB 0.086% 82.60%   629.09MB 15.48%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).Copy (inline)
+    3.50MB 0.086% 82.69%   138.55MB  3.41%  sigs.k8s.io/kustomize/api/filters/fieldspec.Filter.handleMap
+    3.17MB 0.078% 82.76%   100.39MB  2.47%  go.yaml.in/yaml/v3.yaml_parser_scan_block_scalar
+       3MB 0.074% 82.84%    72.01MB  1.77%  sigs.k8s.io/kustomize/api/internal/accumulator.(*nameReferenceTransformer).Transform
+       3MB 0.074% 82.91%    91.01MB  2.24%  sigs.k8s.io/kustomize/kyaml/yaml.PathGetter.Filter
+       3MB 0.074% 82.99%   137.10MB  3.37%  sigs.k8s.io/kustomize/kyaml/yaml.IsValueNonString
+    2.74MB 0.067% 83.05%   197.29MB  4.86%  k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode
+    2.50MB 0.062% 83.12%    22.01MB  0.54%  k8s.io/api/rbac/v1.(*Role).DeepCopy (inline)
+    2.50MB 0.062% 83.18%    59.01MB  1.45%  sigs.k8s.io/kustomize/api/filters/nameref.Filter.run
+    2.01MB 0.049% 83.23%    90.14MB  2.22%  sigs.k8s.io/kustomize/kyaml/yaml.FromMap
+       2MB 0.049% 83.28%    37.02MB  0.91%  regexp.compile
+       2MB 0.049% 83.32%    25.51MB  0.63%  go.yaml.in/yaml/v2.(*parser).mapping
+       2MB 0.049% 83.37%   119.97MB  2.95%  go.yaml.in/yaml/v3.yaml_parser_parse_block_mapping_key
+       2MB 0.049% 83.42%    31.53MB  0.78%  k8s.io/apimachinery/pkg/apis/meta/v1.(*FieldsV1).DeepCopy (inline)
+       2MB 0.049% 83.47%   269.37MB  6.63%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).valueInterface
+    1.50MB 0.037% 83.51%    22.09MB  0.54%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.nbrSlice.DeepCopy (inline)
+    1.50MB 0.037% 83.55%    60.51MB  1.49%  sigs.k8s.io/kustomize/api/filters/nameref.Filter.Filter
+    1.01MB 0.025% 83.57%   104.15MB  2.56%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).MarshalJSON
+       1MB 0.025% 83.60%    21.51MB  0.53%  sigs.k8s.io/kustomize/kyaml/yaml.Parser.Filter
+       1MB 0.025% 83.62%    22.51MB  0.55%  sigs.k8s.io/kustomize/api/types.(*Kustomization).Unmarshal
+       1MB 0.025% 83.64%    28.50MB   0.7%  go.yaml.in/yaml/v3.(*decoder).sequence
+       1MB 0.025% 83.67%   985.27MB 24.25%  sigs.k8s.io/kustomize/kyaml/kio.(*ByteReader).Read
+       1MB 0.025% 83.69%    87.52MB  2.15%  sigs.k8s.io/kustomize/api/internal/builtins.(*NamespaceTransformerPlugin).Transform
+       1MB 0.025% 83.72%    32.58MB   0.8%  sigs.k8s.io/kustomize/kyaml/yaml.(*PathMatcher).doField
+       1MB 0.025% 83.74%    41.02MB  1.01%  sigs.k8s.io/kustomize/kyaml/yaml.(*RNode).LoadMapIntoConfigMapData
+       1MB 0.025% 83.77%    74.53MB  1.83%  sigs.k8s.io/kustomize/api/filters/labels.Filter.Filter.func1
+       1MB 0.025% 83.79%    45.02MB  1.11%  sigs.k8s.io/kustomize/api/filters/namespace.Filter.run
+       1MB 0.025% 83.82%   448.29MB 11.03%  github.com/opendatahub-io/odh-platform-utilities/pkg/deploy.(*Deployer).apply
+       1MB 0.025% 83.84%    65.39MB  1.61%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.(*Unstructured).MarshalJSON
+       1MB 0.025% 83.87%   291.87MB  7.18%  k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.unstructuredJSONScheme.decodeToUnstructured
+       1MB 0.025% 83.89%    43.51MB  1.07%  k8s.io/apimachinery/pkg/runtime.(*unstructuredConverter).ToUnstructured
+       1MB 0.025% 83.92%    39.51MB  0.97%  go.yaml.in/yaml/v2.(*parser).document
+       1MB 0.025% 83.94%    64.11MB  1.58%  go.yaml.in/yaml/v3.(*encoder).marshal.(*encoder).mapv.func1
+       1MB 0.025% 83.96%    34.68MB  0.85%  reflect.MakeSlice
+       1MB 0.025% 83.99%   295.37MB  7.27%  sigs.k8s.io/json/internal/golang/encoding/json.(*decodeState).object
+    0.51MB 0.012% 84.00%    76.36MB  1.88%  go.yaml.in/yaml/v3.(*encoder).emitScalar
+    0.50MB 0.012% 84.01%    37.64MB  0.93%  sigs.k8s.io/kustomize/api/internal/plugins/builtinconfig.(*TransformerConfig).DeepCopy

@@ -1,0 +1,98 @@
+File: manager
+Build ID: 340dd7dbbf22457d76b358ccd32d1828fec30035
+Type: inuse_objects
+Time: 2026-11-19 18:46:15 GMT
+Showing nodes accounting for 367284, 99.41% of 369470 total
+Dropped 67 nodes (cum <= 1847)
+      flat  flat%   sum%        cum   cum%
+    137856 37.31% 37.31%     251005 67.94%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ObjectMeta).Unmarshal
+     85198 23.06% 60.37%     113149 30.62%  k8s.io/apimachinery/pkg/apis/meta/v1.(*ManagedFieldsEntry).Unmarshal
+     27951  7.57% 67.94%      27951  7.57%  bytes.Clone (inline)
+     21845  5.91% 73.85%      21845  5.91%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*Informers).addInformerToMap
+     13812  3.74% 77.59%      13812  3.74%  reflect.unsafe_New
+     10923  2.96% 80.54%      10923  2.96%  k8s.io/api/core/v1.(*VolumeMount).Unmarshal
+     10923  2.96% 83.50%      10923  2.96%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypeWithName
+     10923  2.96% 86.46%      10923  2.96%  k8s.io/apimachinery/pkg/runtime.NewScheme
+      8192  2.22% 88.67%       8192  2.22%  k8s.io/api/rbac/v1.(*PolicyRule).Unmarshal
+      8192  2.22% 90.89%       8192  2.22%  k8s.io/client-go/tools/cache.ObjectName.String (inline)
+      7563  2.05% 92.94%       7563  2.05%  k8s.io/apimachinery/pkg/util/sets.Set[go.shape.string].Insert (inline)
+      6963  1.88% 94.82%      41175 11.14%  k8s.io/api/core/v1.(*Secret).Unmarshal
+      6553  1.77% 96.60%       6553  1.77%  runtime.mallocgc
+      3278  0.89% 97.48%       3278  0.89%  k8s.io/api/core/v1.(*ResourceRequirements).Unmarshal
+      2731  0.74% 98.22%       2731  0.74%  go.yaml.in/yaml/v2.getStructInfo
+      2341  0.63% 98.86%       2341  0.63%  k8s.io/api/apps/v1.(*DeploymentStatus).Unmarshal
+      1517  0.41% 99.27%      40656 11.00%  k8s.io/api/core/v1.(*ConfigMap).Unmarshal
+       256 0.069% 99.34%       2076  0.56%  k8s.io/api/rbac/v1.(*ClusterRole).Unmarshal
+       228 0.062% 99.40%      14429  3.91%  k8s.io/api/core/v1.(*PodSpec).Unmarshal
+        39 0.011% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*cache).Replace
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.(*decoder).document (inline)
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.(*decoder).mapping
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.(*decoder).mappingStruct
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.(*decoder).sequence
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.(*decoder).unmarshal
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.Unmarshal (inline)
+         0     0% 99.41%       2731  0.74%  go.yaml.in/yaml/v2.unmarshal
+         0     0% 99.41%      72280 19.56%  k8s.io/api/apps/v1.(*Deployment).Unmarshal
+         0     0% 99.41%      32861  8.89%  k8s.io/api/apps/v1.(*DeploymentSpec).Unmarshal
+         0     0% 99.41%      10923  2.96%  k8s.io/api/apps/v1beta1.addKnownTypes
+         0     0% 99.41%      14201  3.84%  k8s.io/api/core/v1.(*Container).Unmarshal
+         0     0% 99.41%       4915  1.33%  k8s.io/api/core/v1.(*Namespace).Unmarshal
+         0     0% 99.41%      31041  8.40%  k8s.io/api/core/v1.(*PodTemplateSpec).Unmarshal
+         0     0% 99.41%      77255 20.91%  k8s.io/api/core/v1.(*ServiceAccount).Unmarshal
+         0     0% 99.41%      22756  6.16%  k8s.io/api/rbac/v1.(*Role).Unmarshal
+         0     0% 99.41%      24045  6.51%  k8s.io/api/rbac/v1.(*RoleBinding).Unmarshal
+         0     0% 99.41%      27951  7.57%  k8s.io/apimachinery/pkg/apis/meta/v1.(*FieldsV1).SetRawBytes (inline)
+         0     0% 99.41%      27951  7.57%  k8s.io/apimachinery/pkg/apis/meta/v1.(*FieldsV1).Unmarshal
+         0     0% 99.41%      10923  2.96%  k8s.io/apimachinery/pkg/apis/meta/v1.init
+         0     0% 99.41%      10923  2.96%  k8s.io/apimachinery/pkg/runtime.(*Scheme).AddKnownTypes
+         0     0% 99.41%      13812  3.74%  k8s.io/apimachinery/pkg/runtime.(*Scheme).New
+         0     0% 99.41%      10923  2.96%  k8s.io/apimachinery/pkg/runtime.(*SchemeBuilder).AddToScheme
+         0     0% 99.41%     300335 81.29%  k8s.io/apimachinery/pkg/runtime.Decode (inline)
+         0     0% 99.41%      13812  3.74%  k8s.io/apimachinery/pkg/runtime.UseOrCreateObject
+         0     0% 99.41%     300335 81.29%  k8s.io/apimachinery/pkg/runtime.WithoutVersionDecoder.Decode
+         0     0% 99.41%     300335 81.29%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.(*Serializer).Decode
+         0     0% 99.41%     300335 81.29%  k8s.io/apimachinery/pkg/runtime/serializer/protobuf.unmarshalToObject
+         0     0% 99.41%      15794  4.27%  k8s.io/apimachinery/pkg/util/wait.BackoffUntilWithContext
+         0     0% 99.41%      15794  4.27%  k8s.io/apimachinery/pkg/util/wait.BackoffUntilWithContext.func1
+         0     0% 99.41%      15794  4.27%  k8s.io/apimachinery/pkg/util/wait.JitterUntilWithContext
+         0     0% 99.41%      21845  5.91%  k8s.io/apimachinery/pkg/util/wait.PollUntilContextCancel
+         0     0% 99.41%      15794  4.27%  k8s.io/apimachinery/pkg/util/wait.UntilWithContext (inline)
+         0     0% 99.41%      21845  5.91%  k8s.io/apimachinery/pkg/util/wait.loopConditionUntilContext
+         0     0% 99.41%      21845  5.91%  k8s.io/apimachinery/pkg/util/wait.loopConditionUntilContext.func1
+         0     0% 99.41%     300340 81.29%  k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive
+         0     0% 99.41%     300340 81.29%  k8s.io/client-go/rest/watch.(*Decoder).Decode
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*RealFIFO).PopBatch
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*RealFIFO).PopBatch.func3
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*RealFIFO).whileProcessing_locked
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*controller).RunWithContext
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*controller).processLoop
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*sharedIndexInformer).RunWithContext
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*sharedIndexInformer).RunWithContext.func1.1
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.(*sharedIndexInformer).handleDeltas
+         0     0% 99.41%       7563  2.05%  k8s.io/client-go/tools/cache.(*storeIndex).addKeyToIndex (inline)
+         0     0% 99.41%       7563  2.05%  k8s.io/client-go/tools/cache.(*storeIndex).updateIndices (inline)
+         0     0% 99.41%       7563  2.05%  k8s.io/client-go/tools/cache.(*storeIndex).updateSingleIndex
+         0     0% 99.41%       7563  2.05%  k8s.io/client-go/tools/cache.(*threadSafeMap).Replace
+         0     0% 99.41%       8192  2.22%  k8s.io/client-go/tools/cache.DeletionHandlingMetaNamespaceKeyFunc
+         0     0% 99.41%       8192  2.22%  k8s.io/client-go/tools/cache.MetaNamespaceKeyFunc
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.processDeltas
+         0     0% 99.41%      15794  4.27%  k8s.io/client-go/tools/cache.processReplacedAllInfo
+         0     0% 99.41%      13812  3.74%  reflect.New
+         0     0% 99.41%       5461  1.48%  runtime.(*scavengerState).init
+         0     0% 99.41%       5461  1.48%  runtime.bgscavenge
+         0     0% 99.41%      24629  6.67%  runtime.doInit (inline)
+         0     0% 99.41%      24629  6.67%  runtime.doInit1
+         0     0% 99.41%      24922  6.75%  runtime.main
+         0     0% 99.41%       6553  1.77%  runtime.newobject
+         0     0% 99.41%      21845  5.91%  sigs.k8s.io/controller-runtime/pkg/cache.(*informerCache).GetInformer
+         0     0% 99.41%      15794  4.27%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*Cache).Start
+         0     0% 99.41%      21845  5.91%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*Informers).Get
+         0     0% 99.41%      15794  4.27%  sigs.k8s.io/controller-runtime/pkg/cache/internal.(*Informers).startInformerLocked.func1
+         0     0% 99.41%      10923  2.96%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.init.0
+         0     0% 99.41%     300335 81.29%  sigs.k8s.io/controller-runtime/pkg/client/apiutil.targetZeroingDecoder.Decode
+         0     0% 99.41%      21845  5.91%  sigs.k8s.io/controller-runtime/pkg/internal/source.(*Kind[go.shape.49c155c91576830ee655d804b5e7b1fc9d1b717385cca83dc56c659142a3fa38,go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).Start.func1
+         0     0% 99.41%      21845  5.91%  sigs.k8s.io/controller-runtime/pkg/internal/source.(*Kind[go.shape.49c155c91576830ee655d804b5e7b1fc9d1b717385cca83dc56c659142a3fa38,go.shape.struct { k8s.io/apimachinery/pkg/types.NamespacedName }]).Start.func1.1
+         0     0% 99.41%       2731  0.74%  sigs.k8s.io/structured-merge-diff/v6/typed.create
+         0     0% 99.41%       2731  0.74%  sigs.k8s.io/structured-merge-diff/v6/typed.createOrDie
+         0     0% 99.41%       2731  0.74%  sigs.k8s.io/structured-merge-diff/v6/typed.init
+         0     0% 99.41%      15794  4.27%  sync.(*WaitGroup).Go.func1
