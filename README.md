@@ -98,8 +98,7 @@ Missing evidence is shown as `Not recorded`, and a run without final cluster-hea
 
 - [`.agents/skills/dashboard-cache-performance/`](.agents/skills/dashboard-cache-performance/): benchmark skill, configuration, workflow, and report renderer.
 - [`scripts/`](scripts/): population, collection, cleanup, and chart utilities used by the skill.
-- [`output/results/`](output/results/): timestamped output from new skill runs.
-- [`outputs/`](outputs/): reference evidence and reports from the original benchmark.
+- [`output/results/`](output/results/): timestamped benchmark reports and evidence, including the migrated reference benchmark.
 - [`patches/`](patches/): diagnostic-only pprof changes for the profiled source revisions.
 
 ## Safety

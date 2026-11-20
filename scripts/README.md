@@ -110,7 +110,7 @@ Requirements: `oc`, `jq`, an active login, and a running dashboard-operator pod.
 ```sh
 scripts/collect-dashboard-cache-benchmark.sh \
   /path/to/kubeconfig \
-  outputs/samples.tsv \
+  output/results/<run-id>/samples.tsv \
   20 \
   30 \
   expected-image-reference
@@ -128,7 +128,7 @@ scripts/collect-dashboard-heap-profile.sh \
   /path/to/kubeconfig \
   redhat-ods-applications \
   dashboard-operator-pod-name \
-  outputs/profile-prefix \
+  output/results/<run-id>/profile-prefix \
   manager
 ```
 
@@ -136,7 +136,7 @@ The optional final argument selects the operator container and defaults to `mana
 
 ## Chart rendering
 
-`render-cache-comparison.py` requires Pillow and reads the recorded namespace benchmark TSV files from `outputs/`.
+`render-cache-comparison.py` requires Pillow and reads the migrated reference benchmark TSV files from `output/results/20261119T184750Z-cache-optimization/`.
 
 ```sh
 python3 scripts/render-cache-comparison.py

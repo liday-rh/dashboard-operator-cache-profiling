@@ -12,9 +12,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "outputs" / "charts"
-PRE_FILE = ROOT / "outputs" / "dashboard-cache-baseline-samples.tsv"
-POST_FILE = ROOT / "outputs" / "dashboard-cache-post-optimization-samples.tsv"
+REFERENCE_RUN = ROOT / "output" / "results" / "20261119T184750Z-cache-optimization"
+OUTPUT = REFERENCE_RUN / "charts"
+PRE_FILE = REFERENCE_RUN / "dashboard-cache-baseline-samples.tsv"
+POST_FILE = REFERENCE_RUN / "dashboard-cache-post-optimization-samples.tsv"
 
 WIDTH, HEIGHT = 1800, 1000
 BACKGROUND = "#ffffff"
