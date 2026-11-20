@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Populate an OpenShift cluster with lightweight, RHOAI-like test objects.
+"""Populate or clean up lightweight, RHOAI-like OpenShift test objects.
 
 The script streams generated objects to one `oc apply` process.  It waits only
 for API acceptance; it never waits for Deployments or Pods to become ready.
+Cleanup deletes only namespaces carrying the exact generated-fixture labels.
 """
 
 from __future__ import annotations
@@ -26,17 +27,24 @@ MAX_CONFIGMAP_PAYLOAD_KIB = 900
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Create synthetic RHOAI/ODH project namespaces and optionally "
-            "populate each one with lightweight Kubernetes resources."
+            "Create or clean up synthetic RHOAI/ODH project namespaces and "
+            "their lightweight Kubernetes resources."
         )
+    )
+    parser.add_argument(
+        "--cleanup",
+        action="store_true",
+        help=(
+            "delete namespaces for the explicitly supplied --prefix; all "
+            "resources in those namespaces are deleted with them"
+        ),
     )
     parser.add_argument(
         "-n",
         "--namespaces",
         type=int,
-        required=True,
         metavar="COUNT",
-        help="number of new namespaces to generate",
+        help="number of new namespaces to generate (required when creating)",
     )
     populate = parser.add_mutually_exclusive_group()
     populate.add_argument(
@@ -53,8 +61,10 @@ def parse_args() -> argparse.Namespace:
     parser.set_defaults(populate_resources=False)
     parser.add_argument(
         "--prefix",
-        default=DEFAULT_PREFIX,
-        help=f"namespace and fixture name prefix (default: {DEFAULT_PREFIX})",
+        help=(
+            f"namespace and fixture name prefix (default when creating: "
+            f"{DEFAULT_PREFIX}; required for cleanup)"
+        ),
     )
     parser.add_argument(
         "--deployment-replicas",
@@ -88,7 +98,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="write generated manifest documents to stdout without calling oc",
+        help=(
+            "write generated manifests without calling oc; with --cleanup, "
+            "list matching namespaces without deleting them"
+        ),
     )
     parser.add_argument(
         "--verbose-oc",
@@ -99,6 +112,20 @@ def parse_args() -> argparse.Namespace:
 
 
 def validate_args(args: argparse.Namespace) -> None:
+    if args.prefix is None:
+        if args.cleanup:
+            raise ValueError("--cleanup requires an explicit --prefix")
+        args.prefix = DEFAULT_PREFIX
+    if len(args.prefix) > 45:
+        raise ValueError("--prefix must be at most 45 characters")
+    if not re.fullmatch(r"[a-z0-9](?:[-a-z0-9]*[a-z0-9])?", args.prefix):
+        raise ValueError(
+            "--prefix must be a lowercase DNS label: letters, digits and hyphens"
+        )
+    if args.cleanup:
+        return
+    if args.namespaces is None:
+        raise ValueError("--namespaces is required when creating a fixture")
     if args.namespaces < 1:
         raise ValueError("--namespaces must be at least 1")
     if args.deployment_replicas < 0:
@@ -109,12 +136,6 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError(
             f"--configmap-payload-kib must be between 0 and "
             f"{MAX_CONFIGMAP_PAYLOAD_KIB}"
-        )
-    if len(args.prefix) > 45:
-        raise ValueError("--prefix must be at most 45 characters")
-    if not re.fullmatch(r"[a-z0-9](?:[-a-z0-9]*[a-z0-9])?", args.prefix):
-        raise ValueError(
-            "--prefix must be a lowercase DNS label: letters, digits and hyphens"
         )
 
 
@@ -127,6 +148,57 @@ def run_oc(*arguments: str) -> str:
         text=True,
     )
     return result.stdout.strip()
+
+
+def cleanup_fixture(args: argparse.Namespace) -> None:
+    if shutil.which("oc") is None:
+        raise RuntimeError("oc was not found in PATH")
+    selector = (
+        f"scale.opendatahub.io/fixture={args.prefix},"
+        f"app.kubernetes.io/managed-by={MANAGED_BY}"
+    )
+    try:
+        user = run_oc("whoami")
+        server = run_oc("whoami", "--show-server")
+        namespaces = json.loads(
+            run_oc("get", "namespaces", "-l", selector, "-o", "json")
+        )
+    except (json.JSONDecodeError, subprocess.CalledProcessError) as exc:
+        detail = getattr(exc, "stderr", "").strip() or str(exc)
+        raise RuntimeError(f"oc cleanup preflight failed: {detail}") from exc
+
+    names = sorted(item["metadata"]["name"] for item in namespaces["items"])
+    print(f"Target: {server} as {user}", file=sys.stderr)
+    if not names:
+        print(
+            f"No generated namespaces found for prefix {args.prefix!r}.",
+            file=sys.stderr,
+        )
+        return
+    sample = ", ".join(names[:20])
+    suffix = " ..." if len(names) > 20 else ""
+    print(f"Matched {len(names)} namespace(s): {sample}{suffix}", file=sys.stderr)
+    if args.dry_run:
+        print("Cleanup dry run; no namespaces were deleted.", file=sys.stderr)
+        return
+    try:
+        output = run_oc(
+            "delete",
+            "namespaces",
+            "-l",
+            selector,
+            "--wait=false",
+        )
+    except subprocess.CalledProcessError as exc:
+        detail = exc.stderr.strip() or str(exc)
+        raise RuntimeError(f"oc cleanup failed: {detail}") from exc
+    if output:
+        print(output, file=sys.stderr)
+    print(
+        f"Submitted deletion for {len(names)} namespace(s); deletion completion "
+        "was not awaited.",
+        file=sys.stderr,
+    )
 
 
 def preflight(args: argparse.Namespace, namespace_names: list[str]) -> None:
@@ -440,6 +512,11 @@ def main() -> int:
     args = parse_args()
     try:
         validate_args(args)
+        if args.cleanup:
+            cleanup_fixture(args)
+            return 0
+
+        assert args.namespaces is not None
         width = max(4, len(str(args.namespaces)))
         namespace_names = [
             f"{args.prefix}-{index:0{width}d}"

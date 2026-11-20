@@ -320,23 +320,14 @@ def cleanup(config: dict[str, Any], name: str, confirm_prefix: str) -> None:
     prefix = item["resolved_prefix"]
     if confirm_prefix != prefix:
         fail(f"confirmation does not match resolved prefix {prefix!r}")
-    selector = f"scale.opendatahub.io/fixture={prefix}"
-    data = oc_json(config, ["get", "namespaces", "-l", selector])
-    names = [entry["metadata"]["name"] for entry in data.get("items", [])]
-    if not names:
-        print(f"no namespaces found for {selector}")
-        return
-    print(f"deleting {len(names)} namespaces for {selector}")
+    script = Path(config["project_root"]) / "scripts" / "populate-rhoai-scale-cluster.py"
     execute(
         [
-            "oc",
-            "--kubeconfig",
-            config["kubeconfig"],
-            "delete",
-            "namespaces",
-            "-l",
-            selector,
-            "--wait=false",
+            sys.executable,
+            str(script),
+            "--cleanup",
+            "--prefix",
+            prefix,
         ],
         env=environment(config),
     )

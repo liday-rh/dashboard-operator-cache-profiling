@@ -67,33 +67,41 @@ python3 scripts/populate-rhoai-scale-cluster.py \
 
 | Option | Purpose |
 |---|---|
-| `--namespaces COUNT` | Required namespace count |
+| `--namespaces COUNT` | Namespace count; required when creating |
+| `--cleanup` | Delete all generated namespaces for the explicitly supplied prefix |
 | `--populate-resources` | Add the workbench-like resource bundle |
 | `--prefix NAME` | Namespace prefix and fixture label |
 | `--deployment-replicas COUNT` | Deployment replicas; default `0` |
 | `--configmaps-per-namespace COUNT` | ConfigMaps per populated namespace; default `1` |
 | `--configmap-payload-kib KIB` | Payload per ConfigMap; range `0–900` KiB |
 | `--allow-existing-namespaces` | Permit idempotent apply into existing target namespaces |
-| `--dry-run` | Generate manifests without cluster changes |
+| `--dry-run` | Generate manifests without cluster changes, or preview cleanup matches |
 | `--verbose-oc` | Show `oc apply` output |
 
 The populated bundle contains a ServiceAccount, ConfigMap(s), Secret, zero-replica Deployment, Service, NetworkPolicy, PodDisruptionBudget, Role, and RoleBinding.
 
 ### Cleanup
 
-Inspect the exact target first:
+For example, after creating a fixture with `--prefix rhoai-scale`, preview the exact cleanup target without deleting anything:
 
 ```sh
-oc get namespaces -l scale.opendatahub.io/fixture=rhoai-scale
+python3 scripts/populate-rhoai-scale-cluster.py \
+  --cleanup \
+  --prefix rhoai-scale \
+  --dry-run
 ```
 
-Delete only that fixture:
+Delete the generated namespaces and all resources contained in them:
 
 ```sh
-oc delete namespaces -l scale.opendatahub.io/fixture=rhoai-scale
+python3 scripts/populate-rhoai-scale-cluster.py \
+  --cleanup \
+  --prefix rhoai-scale
 ```
 
-Cleanup is destructive. Never use a broad or unverified selector.
+Cleanup requires an explicit prefix, matches both fixture and generator labels, and submits deletion with `--wait=false`. It is destructive; preview the match first.
+
+The prefix must be the same value used when the fixture was created. Namespace deletion also removes the generated ConfigMaps, Secrets, Deployments, Services, RBAC objects, and other namespaced resources.
 
 ## Benchmark collection
 
